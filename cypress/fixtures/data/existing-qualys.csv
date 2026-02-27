@@ -1,0 +1,10 @@
+Scan Results,01/20/2023 at 15:23:28 (GMT+0700),,,,,,,,,,,,,,,,,,,,,,,
+Famous Company,Street No 1,,Atlantis,,Asgard,11337,,,,,,,,,,,,,,,,,,
+John Lenon,john2usr,Manager,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+Launch Date,Client,Active Hosts,Total Hosts,Type,Status,Reference,Scanner Appliance,Duration,Scan Title,Asset Groups,IPs,Excluded IPs,Option Profile,Network,,,,,,,,,,
+01/18/2023 at 23:07:10 (GMT+0700),PYM Tech,1,1,API,Finished,scan/1234567890,192.168.1.1 (Scanner 12.12.48-1 Vulnerability Signatures 2.5.678-3),00:02:58,PYM Tech.41960f13-a5a1-47b8-9702-5001b5c903aa,PYM Tech.41960f13-a5a1-47b8-9702-5001b5c903aa,192.168.1.1,,57a565b8-0eaa-4207-bb33-d077e1a3df9e,Global Default Network,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+IP,DNS,NetBIOS,OS,IP Status,QID,Title,Type,Severity,Port,Protocol,FQDN,SSL,CVE ID,Vendor Reference,Bugtraq ID,Threat,Impact,Solution,Exploitability,Associated Malware,Results,PCI Vuln,Instance,Category
+192.168.1.1,No registered hostname,,Epson Printer,host scanned found vuln,38628,Secure Sockets Layer/Transport Layer Security (SSL/TLS) Server supports Transport Layer Security (TLSv1.0),Vuln,3,465,tcp,,over ssl,,Deprecating TLS 1.0 and TLS 1.1,,,,,,,TLSv1.0 is supported,yes,,General remote services
+192.168.1.2,No registered hostname,,Epson Printer,host scanned found vuln,38794,Secure Sockets Layer/Transport Layer Security (SSL/TLS) Server Supports Transport Layer Security (TLSv1.1),Vuln,3,465,tcp,,over ssl,,Deprecating TLS 1.0 and TLS 1.1,,,,,,,TLSv1.1 is supported,no,,General remote services

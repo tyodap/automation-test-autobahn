@@ -1,0 +1,1241 @@
+{
+  "Generated": "24/11/2022 02:23 PM",
+  "Target": {
+    "Duration": "08:37:39.9815604",
+    "Initiated": "15/09/2022 07:03 PM",
+    "ScanId": "7d08d6d911b64dcd556eaf110296b5d7",
+    "Url": "http://127.0.0.1:3000/"
+  },
+  "Vulnerabilities": [
+    {
+      "Certainty": 85,
+      "Classification": {
+        "Iso27001": "A.14.2.5",
+        "Capec": "66",
+        "Cvss": {
+          "BaseScore": {
+            "Severity": 4,
+            "Type": "Base",
+            "Value": "10.0"
+          },
+          "EnvironmentalScore": {
+            "Severity": 4,
+            "Type": "Environmental",
+            "Value": "10.0"
+          },
+          "TemporalScore": {
+            "Severity": 4,
+            "Type": "Temporal",
+            "Value": "10.0"
+          },
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        },
+        "Cvss31": {
+          "BaseScore": {
+            "Severity": 4,
+            "Type": "Base",
+            "Value": "10.0"
+          },
+          "EnvironmentalScore": {
+            "Severity": 4,
+            "Type": "Environmental",
+            "Value": "10.0"
+          },
+          "TemporalScore": {
+            "Severity": 4,
+            "Type": "Temporal",
+            "Value": "10.0"
+          },
+          "Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        },
+        "Cwe": "89",
+        "Hipaa": "164.306(a), 164.308(a)",
+        "Owasp": "A1",
+        "OwaspProactiveControls": "",
+        "Pci32": "6.5.1",
+        "Wasc": "19",
+        "Asvs40": "5.3.4",
+        "Nistsp80053": "SI-10",
+        "DisaStig": "V-16807",
+        "OwaspApiTop10": "API8",
+        "OwaspTopTen2021": "A03"
+      },
+      "Confirmed": false,
+      "Description": "Invicti Enterprise identified a Probable SQL Injection, which occurs when data input by a user is interpreted as an SQL command rather than as normal data by the backend database.\n\nThis is an extremely common vulnerability and its successful exploitation can have critical implications.\n\nEven though Invicti Enterprise believes there is a SQL injection in here, it **could not confirm** it. There can be numerous reasons for Invicti Enterprise not being able to confirm this. We strongly recommend investigating the issue manually to ensure it is an SQL injection and that it needs to be addressed. You can also consider sending the details of this issue to us so we can address this issue for the next time and give you a more precise result.\n\n",
+      "ExploitationSkills": "There are numerous freely available tools to test for SQL injection vulnerabilities. This is a complex area with many dependencies; however, it should be noted that the numerous resources available in this area have raised both attacker awareness of the issues and their ability to discover and leverage them. SQL injection is one of the most common web application vulnerabilities.\n\n",
+      "ExternalReferences": "* [OWASP SQL injection][0]\n* [SQL Injection Cheat Sheet][1]\n* [SQL Injection Vulnerability][2]\n\n[0]: https://wiki.owasp.org/index.php/SQL_injection\n[1]: https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/\n[2]: https://www.netsparker.com/blog/web-security/sql-injection-vulnerability/",
+      "ExtraInformation": [],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET /rest/products/search?q=-1%27%20and%206%3d3%20or%201%3d1%2b(SELECT%201%20and%20ROW(1%2c1)%3e(SELECT%20COUNT(*)%2cCONCAT(CHAR(95)%2cCHAR(33)%2cCHAR(64)%2cCHAR(52)%2cCHAR(100)%2cCHAR(105)%2cCHAR(108)%2cCHAR(101)%2cCHAR(109)%2cCHAR(109)%2cCHAR(97)%2c0x3a%2cFLOOR(RAND(0)*2))x%20FROM%20INFORMATION_SCHEMA.COLLATIONS%20GROUP%20BY%20x)a)%2b%27 HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: application/json, text/plain, */*\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; cookieconsent_status=dismiss\r\nReferer: http://127.0.0.1:3000/\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": [
+          {
+            "Name": "q",
+            "Type": "Querystring",
+            "Value": "-1' and 6=3 or 1=1+(SELECT 1 and ROW(1,1)>(SELECT COUNT(*),CONCAT(CHAR(95),CHAR(33),CHAR(64),CHAR(52),CHAR(100),CHAR(105),CHAR(108),CHAR(101),CHAR(109),CHAR(109),CHAR(97),0x3a,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.COLLATIONS GROUP BY x)a)+'",
+            "Vulnerable": true
+          }
+        ]
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 500 Internal Server Error\r\nDate: Thu, 15 Sep 2022 13:32:26 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nConnection: keep-alive\r\nContent-Type: application/json; charset=utf-8\r\nTransfer-Encoding: chunked\r\nAccess-Control-Allow-Origin: *\r\nVary: Accept-Encoding\r\n\r\n{\n  \"error\": {\n    \"message\": \"SQLITE_ERROR: near \\\"%\\\": syntax error\",\n    \"stack\": \"Error: SQLITE_ERROR: near \\\"%\\\": syntax error\",\n    \"errno\": 1,\n    \"code\": \"SQLITE_ERROR\",\n    \"sql\": \"SELECT * FROM Products WHERE ((name LIKE '%-1' and 6=3 or 1=1+(SELECT 1 and ROW(1,1)>(SELECT COUNT(*),CONCAT(CHAR(95),CHAR(33),CHAR(64),CHAR(52),CHAR(100),CHAR(105),CHAR(108),CHAR(101),CHAR(109),CHAR(109),CHAR(97),0x3a,FLOOR(RAND(0)*2))x FROM %' OR description LIKE '%-1' and 6=3 or 1=1+(SELECT 1 and ROW(1,1)>(SELECT COUNT(*),CONCAT(CHAR(95),CHAR(33),CHAR(64),CHAR(52),CHAR(100),CHAR(105),CHAR(108),CHAR(101),CHAR(109),CHAR(109),CHAR(97),0x3a,FLOOR(RAND(0)*2))x FROM %') AND deletedAt IS NULL) ORDER BY name\"\n  }\n}",
+        "Duration": 284.1816,
+        "StatusCode": 500
+      },
+      "LookupId": "f459abdb-224c-4c83-55a2-af110470a5e5",
+      "Impact": "Depending on the backend database, database connection settings and the operating system, an attacker can mount one or more of the following type of attacks successfully: \n\n* Reading, updating and deleting arbitrary data/tables from the database.\n* Executing commands on the underlying operating system.\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "[Probable] SQL Injection",
+      "ProofOfConcept": "",
+      "RemedialActions": "1. See the remedy for solution.\n1. If you are not using a database access layer (DAL) within the architecture consider its benefits and implement if appropriate. As a minimum the use of s DAL will help centralize the issue and its resolution. You can also use ORM (_object relational mapping_). Most ORM systems use parameterized queries and this can solve many if not all SQL injection based problems.\n1. Locate all of the dynamically generated SQL queries and convert them to parameterized queries. (_If you decide to use a DAL/ORM, change all legacy code to use these new libraries._)\n1. Monitor and review weblogs and application logs to uncover active or previous exploitation attempts.\n\n",
+      "RemedialProcedure": "A very robust method for mitigating the threat of SQL injection-based vulnerabilities is to use parameterized queries (_prepared statements_). Almost all modern languages provide built-in libraries for this. Wherever possible, do not create dynamic SQL queries or SQL queries with string concatenation.\n\n",
+      "RemedyReferences": "* [SQL injection Prevention Cheat Sheet][0]\n* [A guide to preventing SQL injection][1]\n\n[0]: https://wiki.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet\n[1]: http://bobby-tables.com",
+      "Severity": "Critical",
+      "State": "Present",
+      "Type": "HighlyPossibleSqlInjection",
+      "Url": "http://127.0.0.1:3000/rest/products/search?q=-1%27%20and%206%3d3%20or%201%3d1%2b(SELECT%201%20and%20ROW(1%2c1)%3e(SELECT%20COUNT(*)%2cCONCAT(CHAR(95)%2cCHAR(33)%2cCHAR(64)%2cCHAR(52)%2cCHAR(100)%2cCHAR(105)%2cCHAR(108)%2cCHAR(101)%2cCHAR(109)%2cCHAR(109)%2cCHAR(97)%2c0x3a%2cFLOOR(RAND(0)*2))x%20FROM%20INFORMATION_SCHEMA.COLLATIONS%20GROUP%20BY%20x)a)%2b%27",
+      "Tags": []
+    },
+    {
+      "Certainty": 100,
+      "Classification": {
+        "Iso27001": "A.14.1.2",
+        "Capec": "",
+        "Cvss": null,
+        "Cvss31": null,
+        "Cwe": "550",
+        "Hipaa": "",
+        "Owasp": "",
+        "OwaspProactiveControls": "",
+        "Pci32": "",
+        "Wasc": "13",
+        "Asvs40": "",
+        "Nistsp80053": "SI-11",
+        "DisaStig": "V-6166",
+        "OwaspApiTop10": "",
+        "OwaspTopTen2021": ""
+      },
+      "Confirmed": true,
+      "Description": "Invicti Enterprise identified an internal server error.The server responded with an HTTP status 500, indicating there is a server-side error. Reasons may vary, and the behavior should be analyzed carefully. If Invicti Enterprise is able to find a security issue in the same resource, it will report this as a separate vulnerability.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "",
+      "ExtraInformation": [],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET /api/Challenges/?hTTp://r87.com/n HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; cookieconsent_status=dismiss\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": [
+          {
+            "Name": "Query Based",
+            "Type": "FullQueryString",
+            "Value": "hTTp://r87.com/n",
+            "Vulnerable": true
+          }
+        ]
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 500 Internal Server Error\r\nDate: Thu, 15 Sep 2022 13:19:02 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nVary: Accept-Encoding\r\nContent-Type: application/json; charset=utf-8\r\nConnection: keep-alive\r\nContent-Length: 94\r\nAccess-Control-Allow-Origin: *\r\nETag: W/\"5e-H1KXn+njliGkZIkegLKieVtMWUQ\"\r\n\r\n{\"message\":\"internal error\",\"errors\":[\"Cannot read properties of undefined (reading 'find')\"]}",
+        "Duration": 311.18350000000004,
+        "StatusCode": 500
+      },
+      "LookupId": "012e74ea-5615-4b27-55b6-af110470a5e5",
+      "Impact": "The impact may vary depending on the condition. Generally this indicates poor coding practices, not enough error checking, sanitization and whitelisting. However, there might be a bigger issue, such as SQL injection. If that's the case, Invicti Enterprise will check for other possible issues and report them separately.\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "Internal Server Error",
+      "ProofOfConcept": "",
+      "RemedialActions": "",
+      "RemedialProcedure": "Analyze this issue and review the application code in order to handle unexpected errors; this should be a generic practice, which does not disclose further information upon an error. All errors should be handled server-side only.\n\n",
+      "RemedyReferences": "",
+      "Severity": "Low",
+      "State": "Present",
+      "Type": "InternalServerError",
+      "Url": "http://127.0.0.1:3000/api/Challenges/?hTTp://r87.com/n",
+      "Tags": []
+    },
+    {
+      "Certainty": 100,
+      "Classification": {
+        "Iso27001": "A.8.1.1",
+        "Capec": "",
+        "Cvss": null,
+        "Cvss31": null,
+        "Cwe": "",
+        "Hipaa": "",
+        "Owasp": "",
+        "OwaspProactiveControls": "C8",
+        "Pci32": "",
+        "Wasc": "",
+        "Asvs40": "",
+        "Nistsp80053": "",
+        "DisaStig": "",
+        "OwaspApiTop10": "",
+        "OwaspTopTen2021": ""
+      },
+      "Confirmed": true,
+      "Description": "Invicti Enterprise identified a forbidden resource.Access to this resource has been denied by the web server. This is generally not a security issue, and is reported here for informational purposes.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "",
+      "ExtraInformation": [],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET /api/Quantitys/'%22--%3E%3C/style%3E%3C/scRipt%3E%3CscRipt%3Enetsparker(0x00357A)%3C/scRipt%3E HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: application/json, text/plain, */*\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; cookieconsent_status=dismiss\r\nReferer: http://127.0.0.1:3000/\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": [
+          {
+            "Name": "URI-BASED",
+            "Type": "FullUrl",
+            "Value": "'\"--></style></scRipt><scRipt>netsparker(0x00357A)</scRipt>",
+            "Vulnerable": true
+          }
+        ]
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 403 Forbidden\r\nDate: Thu, 15 Sep 2022 13:21:46 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nVary: Accept-Encoding\r\nContent-Type: application/json; charset=utf-8\r\nConnection: keep-alive\r\nContent-Length: 39\r\nAccess-Control-Allow-Origin: *\r\nETag: W/\"27-0BTCm421ALLOKE4+x+1wuRBg5Y0\"\r\n\r\n{\"error\":\"Malicious activity detected\"}",
+        "Duration": 86.5653,
+        "StatusCode": 403
+      },
+      "LookupId": "33523f6c-0662-466a-558e-af110470a5e5",
+      "Impact": "This issue is reported as additional information only. There is no direct impact arising from this issue.\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "Forbidden Resource",
+      "ProofOfConcept": "",
+      "RemedialActions": "",
+      "RemedialProcedure": "",
+      "RemedyReferences": "",
+      "Severity": "Information",
+      "State": "Present, AcceptedRisk",
+      "Type": "ForbiddenResource",
+      "Url": "http://127.0.0.1:3000/api/Quantitys/'%22--%3E%3C/style%3E%3C/scRipt%3E%3CscRipt%3Enetsparker(0x00357A)%3C/scRipt%3E",
+      "Tags": []
+    },
+    {
+      "Certainty": 100,
+      "Classification": {
+        "Iso27001": "A.8.1.1",
+        "Capec": "",
+        "Cvss": null,
+        "Cvss31": null,
+        "Cwe": "",
+        "Hipaa": "",
+        "Owasp": "",
+        "OwaspProactiveControls": "C4",
+        "Pci32": "",
+        "Wasc": "",
+        "Asvs40": "",
+        "Nistsp80053": "",
+        "DisaStig": "",
+        "OwaspApiTop10": "",
+        "OwaspTopTen2021": ""
+      },
+      "Confirmed": true,
+      "Description": "Invicti Enterprise detected file upload functionality, which allows users to upload files to the web server.Upload forms are generally dangerous, unless they are coded with a great deal of care. If there is any other vulnerability identified regarding this resource, Invicti Enterprise will report it as a separate issue.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "",
+      "ExtraInformation": [
+        {
+          "Name": "Input Name",
+          "Value": "file"
+        },
+        {
+          "Name": "Form target action",
+          "Value": "./profile/image/file"
+        }
+      ],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET /profile HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; cookieconsent_status=dismiss; token=eyJ0eXAiOiJKV1QiLCJhbGciOiJOb25lIn0.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.\r\nReferer: -1 or 1=1 and (SELECT 1 and ROW(1,1)>(SELECT COUNT(*),CONCAT(CHAR(95),CHAR(33),CHAR(64),CHAR(52),CHAR(100),CHAR(105),CHAR(108),CHAR(101),CHAR(109),CHAR(109),CHAR(97),0x3a,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.COLLATIONS GROUP BY x)a)\r\nUpgrade-Insecure-Requests: 1\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": [
+          {
+            "Name": "Referer",
+            "Type": "GenericHttpHeader",
+            "Value": "-1 or 1=1 and (SELECT 1 and ROW(1,1)>(SELECT COUNT(*),CONCAT(CHAR(95),CHAR(33),CHAR(64),CHAR(52),CHAR(100),CHAR(105),CHAR(108),CHAR(101),CHAR(109),CHAR(109),CHAR(97),0x3a,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.COLLATIONS GROUP BY x)a)",
+            "Vulnerable": true
+          }
+        ]
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 200 OK\r\nDate: Thu, 15 Sep 2022 13:33:53 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nContent-Security-Policy: img-src 'self' /assets/public/images/uploads/default.svg; script-src 'self' 'unsafe-eval' https://code.getmdl.io http://ajax.googleapis.com\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nKeep-Alive: timeout=5\r\nVary: Accept-Encoding\r\nContent-Type: text/html; charset=utf-8\r\nConnection: keep-alive\r\nContent-Length: 6271\r\nAccess-Control-Allow-Origin: *\r\nETag: W/\"187f-YNcoKYr25UUP+XFBwgZx45oiOTg\"\r\n\r\n<!DOCTYPE html><html lang=\"en\"><head><title>OWASP Juice Shop</title><meta charset=\"utf-8\"><meta name=\"description\" content=\"\"><meta name=\"keywords\" content=\"\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" type=\"image/x-icon\" href=\"./assets/public/favicon_js.ico\"><link rel=\"stylesheet\" href=\"https://code.getmdl.io/1.3.0/material.min.css\"><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\"><link rel=\"stylesheet\" href=\"./assets/public/css/userProfile.css\" type=\"text/css\"><link rel=\"stylesheet\" href=\"http://fonts.googleapis.com/css?family=Roboto:300,400,500,700\" type=\"text/css\"><script src=\"//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script><script src=\"https://code.getmdl.io/1.3.0/material.min.js\"></script><style>.mdl-textfield__input {\nborder-bottom: 1px solid #FFFFFF !important;\nfont-size: 13px !important;\n}</style></head><body style=\"background: #303030;color:#FFFFFF;\"><div class=\"mdl-layout mdl-js-layout mdl-layout--fixed-header\"><header class=\"mdl-layout__header mdl-shadow--8dp\" style=\"background: #546E7A; height: auto; min-width: 100%; padding-bottom: 5px; width: 100%;\"><div class=\"mdl-layout__header-row\"><a href=\"./#/\" style=\"color: #FFFFFF; text-decoration:none; margin-left: -50px;\"><i class=\"material-icons\" style=\"display: block;margin-bottom: auto;margin-top: auto; margin-right: 10px;\">arrow_back</i></a><a href=\"./#/\" style=\"color: #FFFFFF; text-decoration:none;\"><span style=\"margin-right: 20px;\">Back</span></a><!-- Logo--><a href=\"./#/\"><img src=\"assets/public/images/JuiceShop_Logo.png\" style=\"max-height: 60px; width: auto;\" alt=\"OWASP Juice Shop Logo\"></a><!-- Title--><a href=\"./#/\" style=\"color: #FFFFFF; text-decoration:none;\"><span class=\"mdl-layout-title\" style=\"font: 500 20px/32px Roboto,&quot;Helvetica Neue&quot;,sans-serif;\">OWASP Juice Shop</span></a></div></header></div><main class=\"mdl-layout__content\" style=\" display: block; margin-left: auto; margin-right:auto;\"><section class=\"section--center mdl-grid mdl-grid--no-spacing\"><div class=\"mdl-card mdl-cell mdl-cell--12-col mdl-shadow--8dp\" id=\"card\" style=\"height: auto; min-width: 300px;  width: 40%; display: block; margin-left: auto; margin-right:auto; background: #424242; margin-bottom: 50px; margin-top: 110px;\"><div class=\"mdl-card__supporting-text mdl-grid mdl-grid--no-spacing\"><h1 class=\"mdl-cell mdl-cell--12-col\" style=\"color: #FFFFFF; font-size: 24px; line-height: 32px; margin-top: 16px; margin-bottom: 16px; font-weight: 400;\">User Profile</h1><div class=\"mdl-cell mdl-cell--6-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone\"><img class=\"img-rounded\" src=\"/assets/public/images/uploads/default.svg\" alt=\"profile picture\" width=\"90%\" height=\"236\" style=\"margin-right: 5%; margin-left: 5%;\"><p style=\"margin-top:8%; color: #FFFFFF; text-align: center;\">\\</p><form action=\"./profile/image/file\" style=\"margin-top:10%; width: 90%; margin-right: auto; margin-left: auto;\" method=\"post\" enctype=\"multipart/form-data\"><div class=\"form-group\"><label for=\"picture\" style=\"color: #FFFFFF; font-size: 12px;\">File Upload:</label><input id=\"picture\" type=\"file\" accept=\"image/*\" name=\"file\" size=\"150\" style=\"color: #FFFFFF; margin-top: 4px;\" aria-label=\"Input for selecting the profile picture\"><div class=\"mdl-tooltip\" for=\"picture\" style=\"width: 150px; text-align: left;\">&bull; Maximum file size 150Kb<br>&bull; All image formats are accepted</div></div><button class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\" type=\"submit\" style=\"background-color:#546E7A; color: #FFFFFF; margin-top: 3%; text-transform: capitalize;\" aria-label=\"Button to upload the profile picture\">Upload Picture</button></form><div class=\"breakLine\" style=\"margin-top: 3%; margin-bottom: 3%; width: 90%; margin-right: auto; margin-left: auto;\"><div class=\"line\"><div></div></div><div class=\"textOnLine\" style=\"color: #FFFFFF;\">or</div><div class=\"line\"><div></div></div></div><form action=\"./profile/image/url\" style=\"margin-top:5%; width: 90%; margin-right: auto; margin-left: auto;\" method=\"post\"><div class=\"form-group\"><div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\" style=\"width: 100%;\"><input class=\"form-control mdl-textfield__input\" id=\"url\" type=\"text\" name=\"imageUrl\" style=\"color: #FFFFFF;\" placeholder=\"e.g. https://www.gravatar.com/avatar/b642b4217b34b1e8d3bd915fc65c4452\" aria-label=\"Text field for the image link\"><label class=\"mdl-textfield__label\" for=\"url\" style=\"color: #FFFFFF;\">Image URL:</label></div></div><button class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\" id=\"submitUrl\" type=\"submit\" style=\"background-color:#546E7A; color: #FFFFFF; margin-top: -10px; text-transform: capitalize;\" aria-label=\"Button to include image from link\">Link Image</button><p style=\"margin-bottom:10%;\"></p></form></div><div class=\"mdl-cell mdl-cell--6-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone\"><form action=\"./profile\" method=\"post\" style=\"width: 90%; margin-right: auto; margin-left: auto;\"><div class=\"form-group\"><div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\" style=\"width: 100%; opacity: 0.7\"><input class=\"form-control mdl-textfield__input\" id=\"email\" type=\"email\" name=\"email\" value=\"test@test.com\" disabled style=\"color: #FFFFFF;\" aria-label=\"Disabled - Text field for the email\"><label class=\"mdl-textfield__label\" for=\"email\" style=\"color: #FFFFFF;\">Email:</label></div></div><div class=\"form-group\"><div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\" style=\"width: 100%;\"><input class=\"form-control mdl-textfield__input\" id=\"username\" type=\"text\" name=\"username\" value=\"\" style=\"color: #FFFFFF;\" placeholder=\"e.g. SuperUser\" aria-label=\"Text field for the username\"><label class=\"mdl-textfield__label\" for=\"username\" style=\"color: #FFFFFF;\">Username:</label></div></div><button class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\" id=\"submit\" type=\"submit\" style=\"background-color:#546E7A; color: #FFFFFF; margin-top: -10px; text-transform: capitalize;\" aria-label=\"Button to save/set the username\">Set Username</button><p style=\"margin-bottom:10%;\"></p></form></div></div></div></section></main></body></html>",
+        "Duration": 127.8482,
+        "StatusCode": 200
+      },
+      "LookupId": "b5014b67-d327-4e87-5596-af110470a5e5",
+      "Impact": "This issue is reported as additional information only. There is no direct impact arising from this issue.\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "File Upload Functionality Detected",
+      "ProofOfConcept": "",
+      "RemedialActions": "",
+      "RemedialProcedure": "",
+      "RemedyReferences": "",
+      "Severity": "Information",
+      "State": "Present, AcceptedRisk",
+      "Type": "FileUploadFound",
+      "Url": "http://127.0.0.1:3000/profile",
+      "Tags": []
+    },
+    {
+      "Certainty": 100,
+      "Classification": {
+        "Iso27001": "A.14.1.2",
+        "Capec": "",
+        "Cvss": null,
+        "Cvss31": null,
+        "Cwe": "16",
+        "Hipaa": "",
+        "Owasp": "A5",
+        "OwaspProactiveControls": "",
+        "Pci32": "",
+        "Wasc": "15",
+        "Asvs40": "2.10.3",
+        "Nistsp80053": "AC-16",
+        "DisaStig": "V-16786",
+        "OwaspApiTop10": "",
+        "OwaspTopTen2021": "A05"
+      },
+      "Confirmed": true,
+      "Description": "Invicti Enterprise detected that Autocomplete is Enabled in one or more of the form fields which might contain sensitive information like \"username\", \"credit card\" or \"CVV\".\n\n",
+      "ExploitationSkills": "First and foremost, attacker needs either physical access or user-level code execution rights for successful exploitation. Dumping all data from a browser can be fairly easy, and a number of automated tools exist to undertake this. Where the attacker cannot dump the data, he/she could still browse the recently visited websites and activate the autocomplete feature to see previously entered values.\n\n",
+      "ExternalReferences": "",
+      "ExtraInformation": [
+        {
+          "Name": "Identified Field Name",
+          "Value": "username"
+        }
+      ],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET /profile HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; cookieconsent_status=dismiss; token=eyJ0eXAiOiJKV1QiLCJhbGciOiJOb25lIn0.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.\r\nReferer: -1 or 1=1 and (SELECT 1 and ROW(1,1)>(SELECT COUNT(*),CONCAT(CHAR(95),CHAR(33),CHAR(64),CHAR(52),CHAR(100),CHAR(105),CHAR(108),CHAR(101),CHAR(109),CHAR(109),CHAR(97),0x3a,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.COLLATIONS GROUP BY x)a)\r\nUpgrade-Insecure-Requests: 1\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": [
+          {
+            "Name": "Referer",
+            "Type": "GenericHttpHeader",
+            "Value": "-1 or 1=1 and (SELECT 1 and ROW(1,1)>(SELECT COUNT(*),CONCAT(CHAR(95),CHAR(33),CHAR(64),CHAR(52),CHAR(100),CHAR(105),CHAR(108),CHAR(101),CHAR(109),CHAR(109),CHAR(97),0x3a,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.COLLATIONS GROUP BY x)a)",
+            "Vulnerable": true
+          }
+        ]
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 200 OK\r\nDate: Thu, 15 Sep 2022 13:33:53 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nContent-Security-Policy: img-src 'self' /assets/public/images/uploads/default.svg; script-src 'self' 'unsafe-eval' https://code.getmdl.io http://ajax.googleapis.com\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nKeep-Alive: timeout=5\r\nVary: Accept-Encoding\r\nContent-Type: text/html; charset=utf-8\r\nConnection: keep-alive\r\nContent-Length: 6271\r\nAccess-Control-Allow-Origin: *\r\nETag: W/\"187f-YNcoKYr25UUP+XFBwgZx45oiOTg\"\r\n\r\n<!DOCTYPE html><html lang=\"en\"><head><title>OWASP Juice Shop</title><meta charset=\"utf-8\"><meta name=\"description\" content=\"\"><meta name=\"keywords\" content=\"\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"icon\" type=\"image/x-icon\" href=\"./assets/public/favicon_js.ico\"><link rel=\"stylesheet\" href=\"https://code.getmdl.io/1.3.0/material.min.css\"><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\"><link rel=\"stylesheet\" href=\"./assets/public/css/userProfile.css\" type=\"text/css\"><link rel=\"stylesheet\" href=\"http://fonts.googleapis.com/css?family=Roboto:300,400,500,700\" type=\"text/css\"><script src=\"//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script><script src=\"https://code.getmdl.io/1.3.0/material.min.js\"></script><style>.mdl-textfield__input {\nborder-bottom: 1px solid #FFFFFF !important;\nfont-size: 13px !important;\n}</style></head><body style=\"background: #303030;color:#FFFFFF;\"><div class=\"mdl-layout mdl-js-layout mdl-layout--fixed-header\"><header class=\"mdl-layout__header mdl-shadow--8dp\" style=\"background: #546E7A; height: auto; min-width: 100%; padding-bottom: 5px; width: 100%;\"><div class=\"mdl-layout__header-row\"><a href=\"./#/\" style=\"color: #FFFFFF; text-decoration:none; margin-left: -50px;\"><i class=\"material-icons\" style=\"display: block;margin-bottom: auto;margin-top: auto; margin-right: 10px;\">arrow_back</i></a><a href=\"./#/\" style=\"color: #FFFFFF; text-decoration:none;\"><span style=\"margin-right: 20px;\">Back</span></a><!-- Logo--><a href=\"./#/\"><img src=\"assets/public/images/JuiceShop_Logo.png\" style=\"max-height: 60px; width: auto;\" alt=\"OWASP Juice Shop Logo\"></a><!-- Title--><a href=\"./#/\" style=\"color: #FFFFFF; text-decoration:none;\"><span class=\"mdl-layout-title\" style=\"font: 500 20px/32px Roboto,&quot;Helvetica Neue&quot;,sans-serif;\">OWASP Juice Shop</span></a></div></header></div><main class=\"mdl-layout__content\" style=\" display: block; margin-left: auto; margin-right:auto;\"><section class=\"section--center mdl-grid mdl-grid--no-spacing\"><div class=\"mdl-card mdl-cell mdl-cell--12-col mdl-shadow--8dp\" id=\"card\" style=\"height: auto; min-width: 300px;  width: 40%; display: block; margin-left: auto; margin-right:auto; background: #424242; margin-bottom: 50px; margin-top: 110px;\"><div class=\"mdl-card__supporting-text mdl-grid mdl-grid--no-spacing\"><h1 class=\"mdl-cell mdl-cell--12-col\" style=\"color: #FFFFFF; font-size: 24px; line-height: 32px; margin-top: 16px; margin-bottom: 16px; font-weight: 400;\">User Profile</h1><div class=\"mdl-cell mdl-cell--6-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone\"><img class=\"img-rounded\" src=\"/assets/public/images/uploads/default.svg\" alt=\"profile picture\" width=\"90%\" height=\"236\" style=\"margin-right: 5%; margin-left: 5%;\"><p style=\"margin-top:8%; color: #FFFFFF; text-align: center;\">\\</p><form action=\"./profile/image/file\" style=\"margin-top:10%; width: 90%; margin-right: auto; margin-left: auto;\" method=\"post\" enctype=\"multipart/form-data\"><div class=\"form-group\"><label for=\"picture\" style=\"color: #FFFFFF; font-size: 12px;\">File Upload:</label><input id=\"picture\" type=\"file\" accept=\"image/*\" name=\"file\" size=\"150\" style=\"color: #FFFFFF; margin-top: 4px;\" aria-label=\"Input for selecting the profile picture\"><div class=\"mdl-tooltip\" for=\"picture\" style=\"width: 150px; text-align: left;\">&bull; Maximum file size 150Kb<br>&bull; All image formats are accepted</div></div><button class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\" type=\"submit\" style=\"background-color:#546E7A; color: #FFFFFF; margin-top: 3%; text-transform: capitalize;\" aria-label=\"Button to upload the profile picture\">Upload Picture</button></form><div class=\"breakLine\" style=\"margin-top: 3%; margin-bottom: 3%; width: 90%; margin-right: auto; margin-left: auto;\"><div class=\"line\"><div></div></div><div class=\"textOnLine\" style=\"color: #FFFFFF;\">or</div><div class=\"line\"><div></div></div></div><form action=\"./profile/image/url\" style=\"margin-top:5%; width: 90%; margin-right: auto; margin-left: auto;\" method=\"post\"><div class=\"form-group\"><div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\" style=\"width: 100%;\"><input class=\"form-control mdl-textfield__input\" id=\"url\" type=\"text\" name=\"imageUrl\" style=\"color: #FFFFFF;\" placeholder=\"e.g. https://www.gravatar.com/avatar/b642b4217b34b1e8d3bd915fc65c4452\" aria-label=\"Text field for the image link\"><label class=\"mdl-textfield__label\" for=\"url\" style=\"color: #FFFFFF;\">Image URL:</label></div></div><button class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\" id=\"submitUrl\" type=\"submit\" style=\"background-color:#546E7A; color: #FFFFFF; margin-top: -10px; text-transform: capitalize;\" aria-label=\"Button to include image from link\">Link Image</button><p style=\"margin-bottom:10%;\"></p></form></div><div class=\"mdl-cell mdl-cell--6-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone\"><form action=\"./profile\" method=\"post\" style=\"width: 90%; margin-right: auto; margin-left: auto;\"><div class=\"form-group\"><div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\" style=\"width: 100%; opacity: 0.7\"><input class=\"form-control mdl-textfield__input\" id=\"email\" type=\"email\" name=\"email\" value=\"test@test.com\" disabled style=\"color: #FFFFFF;\" aria-label=\"Disabled - Text field for the email\"><label class=\"mdl-textfield__label\" for=\"email\" style=\"color: #FFFFFF;\">Email:</label></div></div><div class=\"form-group\"><div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\" style=\"width: 100%;\"><input class=\"form-control mdl-textfield__input\" id=\"username\" type=\"text\" name=\"username\" value=\"\" style=\"color: #FFFFFF;\" placeholder=\"e.g. SuperUser\" aria-label=\"Text field for the username\"><label class=\"mdl-textfield__label\" for=\"username\" style=\"color: #FFFFFF;\">Username:</label></div></div><button class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\" id=\"submit\" type=\"submit\" style=\"background-color:#546E7A; color: #FFFFFF; margin-top: -10px; text-transform: capitalize;\" aria-label=\"Button to save/set the username\">Set Username</button><p style=\"margin-bottom:10%;\"></p></form></div></div></div></section></main></body></html>",
+        "Duration": 127.8482,
+        "StatusCode": 200
+      },
+      "LookupId": "dbc890f8-5e51-44c3-55aa-af110470a5e5",
+      "Impact": "If user chooses to save, data entered in these fields will be cached by the browser. An attacker who can access the victim's browser could steal this information. This is especially important if the application is commonly used in shared computers, such as cyber cafes or airport terminals.\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "Autocomplete is Enabled",
+      "ProofOfConcept": "",
+      "RemedialActions": "1. Add the attribute autocomplete=\"off\"\t to the form tag or to individual \"input\" fields. However, since early 2014, major browsers don't respect this instruction, due to their integrated password management mechanism, and offer to users to store password internally.\n1. Find all instances of inputs that store private data and disable autocomplete. Fields which contain data such as \"Credit Card\" or \"CCV\" type data should not be cached. You can allow the application to cache usernames and remember passwords; however, in most cases this is not recommended.\n1. Re-scan the application after addressing the identified issues to ensure all of the fixes have been applied properly.\n\n",
+      "RemedialProcedure": "",
+      "RemedyReferences": "",
+      "Severity": "Low",
+      "State": "Present",
+      "Type": "AutoCompleteEnabled",
+      "Url": "http://127.0.0.1:3000/profile",
+      "Tags": []
+    },
+    {
+      "Certainty": 50,
+      "Classification": {
+        "Iso27001": "A.18.1.4",
+        "Capec": "",
+        "Cvss": null,
+        "Cvss31": null,
+        "Cwe": "200",
+        "Hipaa": "",
+        "Owasp": "A6",
+        "OwaspProactiveControls": "",
+        "Pci32": "",
+        "Wasc": "",
+        "Asvs40": "14.3.3",
+        "Nistsp80053": "AC-22",
+        "DisaStig": "V-16814",
+        "OwaspApiTop10": "",
+        "OwaspTopTen2021": ""
+      },
+      "Confirmed": false,
+      "Description": "Invicti Enterprise identified a Possible Internal IP Address Disclosure in the page.\n\nIt was not determined if the IP address was that of the system itself or that of an internal network.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "",
+      "ExtraInformation": [
+        {
+          "Name": "Extracted IP Address(es)",
+          "Value": "172.17.0.1"
+        }
+      ],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET /dataerasure HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; cookieconsent_status=dismiss\r\nReferer: http://127.0.0.1:3000/\r\nUpgrade-Insecure-Requests: 1\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": []
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 500 Internal Server Error\r\nTransfer-Encoding: chunked\r\nDate: Thu, 15 Sep 2022 12:04:32 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nConnection: keep-alive\r\nContent-Type: text/html; charset=utf-8\r\nContent-Encoding: \r\nAccess-Control-Allow-Origin: *\r\nVary: Accept-Encoding\r\n\r\n<html>\n  <head>\n    <meta charset='utf-8'> \n    <title>Error: Blocked illegal activity by ::ffff:172.17.0.1</title>\n    <style>* {\n  margin: 0;\n  padding: 0;\n  outline: 0;\n}\n\nbody {\n  padding: 80px 100px;\n  font: 13px \"Helvetica Neue\", \"Lucida Grande\", \"Arial\";\n  background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9));\n  background: #ECE9E9 -moz-linear-gradient(top, #fff, #ECE9E9);\n  background-repeat: no-repeat;\n  color: #555;\n  -webkit-font-smoothing: antialiased;\n}\nh1, h2 {\n  font-size: 22px;\n  color: #343434;\n}\nh1 em, h2 em {\n  padding: 0 5px;\n  font-weight: normal;\n}\nh1 {\n  font-size: 60px;\n}\nh2 {\n  margin-top: 10px;\n}\nul li {\n  list-style: none;\n}\n#stacktrace {\n  margin-left: 60px;\n}\n</style>\n  </head>\n  <body>\n    <div id=\"wrapper\">\n      <h1>OWASP Juice Shop (Express ^4.17.1)</h1>\n      <h2><em>500</em> Error: Blocked illegal activity by ::ffff:172.17.0.1</h2>\n      <ul id=\"stacktrace\"><li> &nbsp; &nbsp;at /juice-shop/build/routes/dataErasure.js:24:14</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/juice-shop/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at next (/juice-shop/node_modules/express/lib/router/route.js:144:13)</li><li> &nbsp; &nbsp;at Route.dispatch (/juice-shop/node_modules/express/lib/router/route.js:114:3)</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/juice-shop/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at /juice-shop/node_modules/express/lib/router/index.js:284:15</li><li> &nbsp; &nbsp;at Function.process_params (/juice-shop/node_modules/express/lib/router/index.js:346:12)</li><li> &nbsp; &nbsp;at next (/juice-shop/node_modules/express/lib/router/index.js:280:10)</li><li> &nbsp; &nbsp;at Function.handle (/juice-shop/node_modules/express/lib/router/index.js:175:3)</li><li> &nbsp; &nbsp;at router (/juice-shop/node_modules/express/lib/router/index.js:47:12)</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/juice-shop/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at trim_prefix (/juice-shop/node_modules/express/lib/router/index.js:328:13)</li><li> &nbsp; &nbsp;at /juice-shop/node_modules/express/lib/router/index.js:286:9</li><li> &nbsp; &nbsp;at Function.process_params (/juice-shop/node_modules/express/lib/router/index.js:346:12)</li><li> &nbsp; &nbsp;at next (/juice-shop/node_modules/express/lib/router/index.js:280:10)</li><li> &nbsp; &nbsp;at /juice-shop/build/routes/verify.js:135:5</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/juice-shop/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at trim_prefix (/juice-shop/node_modules/express/lib/router/index.js:328:13)</li><li> &nbsp; &nbsp;at /juice-shop/node_modules/express/lib/router/index.js:286:9</li><li> &nbsp; &nbsp;at Function.process_params (/juice-shop/node_modules/express/lib/router/index.js:346:12)</li><li> &nbsp; &nbsp;at next (/juice-shop/node_modules/express/lib/router/index.js:280:10)</li><li> &nbsp; &nbsp;at /juice-shop/build/routes/verify.js:71:5</li></ul>\n    </div>\n  </body>\n</html>\n",
+        "Duration": 312.49870000000004,
+        "StatusCode": 500
+      },
+      "LookupId": "958dcbf3-db4e-4342-55ae-af110470a5e5",
+      "Impact": "There is no direct impact; however, this information can help an attacker identify other vulnerabilities or help during the exploitation of other identified vulnerabilities.\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "[Possible] Internal IP Address Disclosure",
+      "ProofOfConcept": "",
+      "RemedialActions": "",
+      "RemedialProcedure": "First, ensure this is not a false positive. Due to the nature of the issue, Invicti Enterprise could not confirm that this IP address was actually the real internal IP address of the target web server or internal network. If it is, consider removing it.\n\n",
+      "RemedyReferences": "",
+      "Severity": "Low",
+      "State": "Present",
+      "Type": "InternalIPLeakage",
+      "Url": "http://127.0.0.1:3000/dataerasure",
+      "Tags": []
+    },
+    {
+      "Certainty": 100,
+      "Classification": {
+        "Iso27001": "A.14.2.5",
+        "Capec": "107",
+        "Cvss": null,
+        "Cvss31": null,
+        "Cwe": "16",
+        "Hipaa": "",
+        "Owasp": "A5",
+        "OwaspProactiveControls": "",
+        "Pci32": "",
+        "Wasc": "15",
+        "Asvs40": "3.4.2",
+        "Nistsp80053": "AC-16",
+        "DisaStig": "V-16786",
+        "OwaspApiTop10": "API7",
+        "OwaspTopTen2021": "A05"
+      },
+      "Confirmed": true,
+      "Description": "Invicti Enterprise identified a cookie not marked as HTTPOnly.\n\nHTTPOnly cookies cannot be read by client-side scripts, therefore marking a cookie as HTTPOnly can provide an additional layer of protection against cross-site scripting attacks.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "* [Invicti Enterprise - Security Cookies - HTTPOnly Flag][0]\n* [OWASP HTTPOnly Cookies][1]\n* [MSDN - ASP.NET HTTPOnly Cookies][2]\n\n[0]: https://www.netsparker.com/security-cookies-whitepaper/#httpOnlyFlag\n[1]: https://wiki.owasp.org/index.php/HttpOnly\n[2]: https://msdn.microsoft.com/en-us/library/system.web.httpcookie.httponly%28VS.80%29.aspx",
+      "ExtraInformation": [
+        {
+          "Name": "Identified Cookie(s)",
+          "Value": "cookieconsent_status"
+        },
+        {
+          "Name": "Cookie Source",
+          "Value": "JavaScript"
+        }
+      ],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET / HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": []
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\nDate: Thu, 15 Sep 2022 12:04:04 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nAccept-Ranges: bytes\r\nLast-Modified: Thu, 15 Sep 2022 09:57:56 GMT\r\nETag: W/\"7c3-18340956677\"\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Encoding: \r\nConnection: keep-alive\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: public, max-age=0\r\nVary: Accept-Encoding\r\n\r\n<!--\n  ~ Copyright (c) 2014-2022 Bjoern Kimminich & the OWASP Juice Shop contributors.\n  ~ SPDX-License-Identifier: MIT\n  --><!DOCTYPE html><html lang=\"en\"><head>\n  <meta charset=\"utf-8\">\n  <title>OWASP Juice Shop</title>\n  <meta name=\"description\" content=\"Probably the most modern and sophisticated insecure web application\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link id=\"favicon\" rel=\"icon\" type=\"image/x-icon\" href=\"assets/public/favicon_js.ico\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css\">\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>\n  <script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"#546e7a\", \"text\": \"#ffffff\" },\n          \"button\": { \"background\": \"#558b2f\", \"text\": \"#ffffff\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>\n<style>.bluegrey-lightgreen-theme.mat-app-background{background-color:#303030;color:#fff}@charset \"UTF-8\";@media screen and (-webkit-min-device-pixel-ratio:0){}</style><link rel=\"stylesheet\" href=\"styles.css\" media=\"print\" onload=\"this.media='all'\"><noscript><link rel=\"stylesheet\" href=\"styles.css\"></noscript></head>\n<body class=\"mat-app-background bluegrey-lightgreen-theme\">\n  <app-root></app-root>\n<script src=\"runtime.js\" type=\"module\"></script><script src=\"polyfills.js\" type=\"module\"></script><script src=\"vendor.js\" type=\"module\"></script><script src=\"main.js\" type=\"module\"></script>\n\n</body></html>",
+        "Duration": 15.6264,
+        "StatusCode": 200
+      },
+      "LookupId": "fe055884-7426-4213-5592-af110470a5e5",
+      "Impact": "During a cross-site scripting attack, an attacker might easily access cookies and hijack the victim's session.\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "Cookie Not Marked as HttpOnly",
+      "ProofOfConcept": "",
+      "RemedialActions": "1. See the remedy for solution.\n1. Consider marking all of the cookies used by the application as HTTPOnly. (_After these changes javascript code will not be able to read cookies._)\n\n",
+      "RemedialProcedure": "Mark the cookie as HTTPOnly. This will be an extra layer of defense against XSS. However this is not a silver bullet and will not protect the system against cross-site scripting attacks. An attacker can use a tool such as&nbsp;[XSS Tunnel][0]&nbsp;to bypass HTTPOnly protection.\n\n[0]: https://labs.portcullis.co.uk/tools/xss-tunnel/",
+      "RemedyReferences": "",
+      "Severity": "Low",
+      "State": "Present",
+      "Type": "CookieNotMarkedAsHttpOnly",
+      "Url": "http://127.0.0.1:3000/",
+      "Tags": []
+    },
+    {
+      "Certainty": 95,
+      "Classification": {
+        "Iso27001": "A.9.4.1",
+        "Capec": "118",
+        "Cvss": {
+          "BaseScore": {
+            "Severity": 2,
+            "Type": "Base",
+            "Value": "5.3"
+          },
+          "EnvironmentalScore": {
+            "Severity": 2,
+            "Type": "Environmental",
+            "Value": "5.3"
+          },
+          "TemporalScore": {
+            "Severity": 2,
+            "Type": "Temporal",
+            "Value": "5.3"
+          },
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        },
+        "Cvss31": {
+          "BaseScore": {
+            "Severity": 2,
+            "Type": "Base",
+            "Value": "5.3"
+          },
+          "EnvironmentalScore": {
+            "Severity": 2,
+            "Type": "Environmental",
+            "Value": "5.3"
+          },
+          "TemporalScore": {
+            "Severity": 2,
+            "Type": "Temporal",
+            "Value": "5.3"
+          },
+          "Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        },
+        "Cwe": "200",
+        "Hipaa": "",
+        "Owasp": "",
+        "OwaspProactiveControls": "C7",
+        "Pci32": "",
+        "Wasc": "13",
+        "Asvs40": "14.3.3",
+        "Nistsp80053": "AC-22",
+        "DisaStig": "V-16814",
+        "OwaspApiTop10": "",
+        "OwaspTopTen2021": ""
+      },
+      "Confirmed": false,
+      "Description": "Invicti Enterprise identified an Email Address Disclosure.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "* [Wikipedia - Email Spam][0]\n\n[0]: https://en.wikipedia.org/wiki/Email_spam",
+      "ExtraInformation": [
+        {
+          "Name": "Email Address(es)",
+          "Value": "donotreply@owasp-juice.shop"
+        }
+      ],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET /.well-known/security.txt HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; cookieconsent_status=dismiss\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": [
+          {
+            "Name": "URI-BASED",
+            "Type": "FullUrl",
+            "Value": ".well-known/security.txt",
+            "Vulnerable": true
+          }
+        ]
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 200 OK\r\nDate: Thu, 15 Sep 2022 13:14:46 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nVary: Accept-Encoding\r\nContent-Type: text/plain; charset=utf-8\r\nConnection: keep-alive\r\nContent-Length: 399\r\nAccess-Control-Allow-Origin: *\r\nETag: W/\"18f-bpuZssPQGG6+hA7MyVzRPDCIaek\"\r\n\r\nContact: mailto:donotreply@owasp-juice.shop\nEncryption: https://keybase.io/bkimminich/pgp_keys.asc?fingerprint=19c01cb7157e4645e9e2c863062a85a8cbfbdcda\nAcknowledgements: /#/score-board\nPreferred-languages: en, ar, az, bg, ca, cs, da, de, el, es, et, fi, fr, ka, he, hi, hu, id, it, ja, ko, lv, my, nl, no, pl, pt, ro, ru, si, sv, th, tr, uk, zh\nHiring: /#/jobs\nExpires: Fri, 15 Sep 2023 09:57:55 GMT",
+        "Duration": 16.0699,
+        "StatusCode": 200
+      },
+      "LookupId": "0f7db413-de87-40b3-5586-af110470a5e5",
+      "Impact": "Email addresses discovered within the application can be used by both spam email engines and also brute-force tools. Furthermore, valid email addresses may lead to social engineering attacks.\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "Email Address Disclosure",
+      "ProofOfConcept": "",
+      "RemedialActions": "",
+      "RemedialProcedure": "Use generic email addresses such as contact@ or info@ for general communications and remove user/people-specific email addresses from the website; should this be required, use submission forms for this purpose.\n\n",
+      "RemedyReferences": "",
+      "Severity": "Information",
+      "State": "Present, AcceptedRisk",
+      "Type": "EmailDisclosure",
+      "Url": "http://127.0.0.1:3000/.well-known/security.txt",
+      "Tags": []
+    },
+    {
+      "Certainty": 100,
+      "Classification": {
+        "Iso27001": "A.18.1.3",
+        "Capec": "",
+        "Cvss": null,
+        "Cvss31": null,
+        "Cwe": "",
+        "Hipaa": "",
+        "Owasp": "",
+        "OwaspProactiveControls": "C7",
+        "Pci32": "",
+        "Wasc": "",
+        "Asvs40": "",
+        "Nistsp80053": "AC-22",
+        "DisaStig": "V-16814",
+        "OwaspApiTop10": "",
+        "OwaspTopTen2021": ""
+      },
+      "Confirmed": true,
+      "Description": "Invicti Enterprise detected a Robots.txt\t file with potentially sensitive content.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "* [What Content Is Not Crawled? - Google][0]\n* [How Search organizes information][1]\n* [X-Robots-Tag: A Simple Alternate For Robots .txt and Meta Tag][2]\n\n[0]: https://www.google.com/support/enterprise/static/gsa/docs/admin/current/gsa_doc_set/quick_start/quick_start_crawl.html#1085293\n[1]: https://www.google.com/search/howsearchworks/crawling-indexing/\n[2]: https://www.searchenginejournal.com/x-robots-tag-simple-alternate-robots-txt-meta-tag/67138/",
+      "ExtraInformation": [
+        {
+          "Name": "Interesting Robots.txt Entries",
+          "Value": "Disallow: /ftp"
+        }
+      ],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET /robots.txt HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; cookieconsent_status=dismiss\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": []
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 200 OK\r\nDate: Thu, 15 Sep 2022 12:04:24 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nVary: Accept-Encoding\r\nContent-Type: text/plain; charset=utf-8\r\nConnection: keep-alive\r\nContent-Length: 28\r\nAccess-Control-Allow-Origin: *\r\nETag: W/\"1c-8HgF6mNyhsSFK0pascC9uB0wjX0\"\r\n\r\nUser-agent: *\nDisallow: /ftp",
+        "Duration": 3.6329,
+        "StatusCode": 200
+      },
+      "LookupId": "75284fc2-1eb9-4c83-559e-af110470a5e5",
+      "Impact": " Depending on the content of the file, an attacker might discover hidden directories and files.\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "Robots.txt Detected",
+      "ProofOfConcept": "",
+      "RemedialActions": "",
+      "RemedialProcedure": " Ensure you have nothing sensitive exposed within this file, such as the path of an administration panel. If disallowed paths are sensitive and you want to keep it from unauthorized access, do not write them in the Robots.txt\t, and ensure they are correctly protected by means of authentication.\n\n Robots.txt\tis only used to instruct search robots which resources should be indexed and which ones are not.\n\n The following block can be used to tell the crawler to index files under /web/ and **ignore the rest** :\n\n    User-Agent: *  \nAllow: /web/  \nDisallow: /Please note that when you use the instructions above, **search engines will not index your website**except for the specified directories.\n\nIf you want to hide certain section of the website from the search engines X-Robots-Tag can be set in the response header to tell crawlers whether the file should be indexed or not:\n\n    X-Robots-Tag: googlebot: nofollow  \nX-Robots-Tag: otherbot: noindex, nofollowBy using X-Robots-Tag you don't have to list the these files in your Robots.txt. \n\nIt is also not possible to prevent media files from being indexed by putting using Robots Meta Tags. X-Robots-Tag resolves this issue as well.\n\nFor Apache, the following snippet can be put into httpd.conf or an .htaccess file to restrict crawlers to index multimedia files without exposing them in Robots.txt\n\n    <Files ~ \"\\.pdf$\"&gt;  \n # Don't index PDF files.  \n Header set X-Robots-Tag \"noindex, nofollow\"  \n</Files&gt;    <Files ~ \"\\.(png|jpe?g|gif)$\"&gt;  \n #Don't index image files.  \n Header set X-Robots-Tag \"noindex\"  \n</Files&gt;\n\n",
+      "RemedyReferences": "",
+      "Severity": "Information",
+      "State": "Present, AcceptedRisk",
+      "Type": "RobotsIdentified",
+      "Url": "http://127.0.0.1:3000/robots.txt",
+      "Tags": []
+    },
+    {
+      "Certainty": 70,
+      "Classification": {
+        "Iso27001": "A.14.2.5",
+        "Capec": "19",
+        "Cvss": {
+          "BaseScore": {
+            "Severity": 3,
+            "Type": "Base",
+            "Value": "7.4"
+          },
+          "EnvironmentalScore": {
+            "Severity": 3,
+            "Type": "Environmental",
+            "Value": "7.4"
+          },
+          "TemporalScore": {
+            "Severity": 3,
+            "Type": "Temporal",
+            "Value": "7.4"
+          },
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N"
+        },
+        "Cvss31": {
+          "BaseScore": {
+            "Severity": 3,
+            "Type": "Base",
+            "Value": "7.4"
+          },
+          "EnvironmentalScore": {
+            "Severity": 3,
+            "Type": "Environmental",
+            "Value": "7.4"
+          },
+          "TemporalScore": {
+            "Severity": 3,
+            "Type": "Temporal",
+            "Value": "7.4"
+          },
+          "Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N"
+        },
+        "Cwe": "79",
+        "Hipaa": "164.308(a)",
+        "Owasp": "A3",
+        "OwaspProactiveControls": "",
+        "Pci32": "6.5.7",
+        "Wasc": "8",
+        "Asvs40": "5.3.3",
+        "Nistsp80053": "SI-15",
+        "DisaStig": "V-16811",
+        "OwaspApiTop10": "",
+        "OwaspTopTen2021": "A03"
+      },
+      "Confirmed": false,
+      "Description": "Invicti Enterprise detected Possible Cross-site Scripting, which allows an attacker to execute a dynamic script (_JavaScript, VBScript_) in the context of the application.\n\nThis allows several different attack opportunities, mostly hijacking the current session of the user or changing the look of the page by changing the HTML on the fly to steal the user's credentials. This happens because the input entered by a user has been interpreted as HTML/JavaScript/VBScript by the browser. Cross-site scripting targets the users of the application instead of the server. Although this is a limitation, since it allows attackers to hijack other users' sessions, an attacker might attack an administrator to gain full control over the application.\n\nAlthough Invicti Enterprise believes there is a cross-site scripting in here, it could**not confirm it**. We strongly recommend investigating the issue manually to ensure it is cross-site scripting and needs to be addressed.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "* [OWASP - Cross-site Scripting][0]\n* [Cross-site Scripting Web Application Vulnerability][1]\n* [XSS Shell][2]\n* [XSS Tunnelling][3]\n\n[0]: https://wiki.owasp.org/index.php/Cross_site_scripting\n[1]: https://www.netsparker.com/blog/web-security/cross-site-scripting-xss/\n[2]: https://labs.portcullis.co.uk/tools/xss-shell/\n[3]: https://labs.portcullis.co.uk/tools/xss-tunnel/",
+      "ExtraInformation": [
+        {
+          "Name": "Notes",
+          "Value": "Due to the Content-type header of the response, exploitation of this vulnerability might not be possible because of the browser used or because of the presence of certain web tools. We recommend that you fix this even if it is not an exploitable XSS vulnerability because it can allow an attacker to introduce other attacks to exploit it. But, these issues are not confirmed; you will need to manually confirm them yourself. In general, lack of filtering in the response can cause Cross-site Scripting vulnerabilities in browsers with built-in mime sniffing (such as Internet Explorer)."
+        },
+        {
+          "Name": "Proof URL",
+          "Value": "http://127.0.0.1:3000/rest/products/search?q='%22--%3E%3C/style%3E%3C/scRipt%3E%3CscRipt%3Ealert(0x005507)%3C/scRipt%3E"
+        }
+      ],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET /rest/products/search?q='%22--%3E%3C/style%3E%3C/scRipt%3E%3CscRipt%3Enetsparker(0x005507)%3C/scRipt%3E HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: application/json, text/plain, */*\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; cookieconsent_status=dismiss\r\nReferer: http://127.0.0.1:3000/\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": [
+          {
+            "Name": "q",
+            "Type": "Querystring",
+            "Value": "'\"--></style></scRipt><scRipt>netsparker(0x005507)</scRipt>",
+            "Vulnerable": true
+          }
+        ]
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 500 Internal Server Error\r\nDate: Thu, 15 Sep 2022 13:32:29 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nConnection: keep-alive\r\nContent-Type: application/json; charset=utf-8\r\nTransfer-Encoding: chunked\r\nAccess-Control-Allow-Origin: *\r\nVary: Accept-Encoding\r\n\r\n{\n  \"error\": {\n    \"message\": \"SQLITE_ERROR: near \\\"\\\"--></style></scRipt><scRipt>netsparker(0x005507)</scRipt>%' OR description LIKE '%'\\\"\\\": syntax error\",\n    \"stack\": \"Error: SQLITE_ERROR: near \\\"\\\"--></style></scRipt><scRipt>netsparker(0x005507)</scRipt>%' OR description LIKE '%'\\\"\\\": syntax error\",\n    \"errno\": 1,\n    \"code\": \"SQLITE_ERROR\",\n    \"sql\": \"SELECT * FROM Products WHERE ((name LIKE '%'\\\"--></style></scRipt><scRipt>netsparker(0x005507)</scRipt>%' OR description LIKE '%'\\\"--></style></scRipt><scRipt>netsparker(0x005507)</scRipt>%') AND deletedAt IS NULL) ORDER BY name\"\n  }\n}",
+        "Duration": 73.542,
+        "StatusCode": 500
+      },
+      "LookupId": "41e79f71-dd29-43a0-55ba-af110470a5e5",
+      "Impact": "There are many different attacks that can be leveraged through the use of XSS, including: \n\n* Hijacking user's active session.\n* Changing the look of the page within the victim's browser.\n* Mounting a successful phishing attack.\n* Intercepting data and performing man-in-the-middle attacks.\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "[Possible] Cross-site Scripting",
+      "ProofOfConcept": "",
+      "RemedialActions": "",
+      "RemedialProcedure": "This issue occurs because the browser interprets the input as active HTML, JavaScript or VBScript. To avoid this, all input and output from the application should be filtered / encoded. Output should be filtered / encoded according to the output format and location.\n\nThere are a number of pre-defined, well structured whitelist libraries available for many different environments. Good examples of these include&nbsp;[OWASP Reform][0]&nbsp;and&nbsp;[Microsoft Anti-Cross-site Scripting][1]&nbsp;libraries.\n\n Additionally, you should implement a strong Content Security Policy (CSP) as a defense-in-depth measure if an XSS vulnerability is mistakenly introduced. Due to the complexity of XSS-Prevention and the lack of secure standard behavior in programming languages and frameworks, XSS vulnerabilities are still common in web applications.\n\n CSP will act as a safeguard that can prevent an attacker from successfully exploiting Cross-site Scripting vulnerabilities in your website and is advised in any kind of application. Please make sure to scan your application again with Content Security Policy checks enabled after implementing CSP, in order to avoid common mistakes that can impact the effectiveness of your policy. There are a few pitfalls that can render your CSP policy useless and we highly recommend reading the resources linked in the reference section before you start to implement one.\n\n[0]: http://www.owasp.org/index.php/Category:OWASP_Encoding_Project\n[1]: https://msdn.microsoft.com/en-us/security/aa973814.aspx",
+      "RemedyReferences": "* [Content Security Policy (CSP) Explained][0]\n* [Negative Impact of Incorrect CSP Implementations][1]\n* [[ASP.NET] - Microsoft Anti-XSS Library][2]\n* [OWASP XSS Prevention Cheat Sheet][3]\n\n[0]: https://www.netsparker.com/blog/web-security/content-security-policy/\n[1]: https://www.netsparker.com/blog/web-security/negative-impact-incorrect-csp-implementations/\n[2]: https://docs.microsoft.com/en-us/dotnet/api/system.web.security.antixss\n[3]: https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.md",
+      "Severity": "Medium",
+      "State": "Present",
+      "Type": "PossibleXss",
+      "Url": "http://127.0.0.1:3000/rest/products/search?q='%22--%3E%3C/style%3E%3C/scRipt%3E%3CscRipt%3Enetsparker(0x005507)%3C/scRipt%3E",
+      "Tags": []
+    },
+    {
+      "Certainty": 95,
+      "Classification": {
+        "Iso27001": "A.14.1.2",
+        "Capec": "",
+        "Cvss": null,
+        "Cvss31": null,
+        "Cwe": "16",
+        "Hipaa": "",
+        "Owasp": "A5",
+        "OwaspProactiveControls": "",
+        "Pci32": "",
+        "Wasc": "15",
+        "Asvs40": "14.5.3, 14.5.2",
+        "Nistsp80053": "CM-6",
+        "DisaStig": "V-6141",
+        "OwaspApiTop10": "API7",
+        "OwaspTopTen2021": "A05"
+      },
+      "Confirmed": false,
+      "Description": "Invicti Enterprise detected a possibly misconfigured Access-Control-Allow-Origin header in resource's HTTP response.Cross-origin resource sharing (CORS) is a mechanism that allows resources on a web page to be requested outside the domain through XMLHttpRequest.Unless this HTTP header is present, such \"cross-domain\" requests are forbidden by web browsers, per the same-origin security policy.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "* [Cross-Origin Resource Sharing][0]\n* [HTTP access control (CORS)][1]\n* [Using CORS][2]\n\n[0]: https://www.w3.org/TR/cors/\n[1]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS\n[2]: https://www.html5rocks.com/en/tutorials/cors/",
+      "ExtraInformation": [
+        {
+          "Name": "Access-Control-Allow-Origin",
+          "Value": "*"
+        }
+      ],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET / HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": []
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\nDate: Thu, 15 Sep 2022 12:04:04 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nAccept-Ranges: bytes\r\nLast-Modified: Thu, 15 Sep 2022 09:57:56 GMT\r\nETag: W/\"7c3-18340956677\"\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Encoding: \r\nConnection: keep-alive\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: public, max-age=0\r\nVary: Accept-Encoding\r\n\r\n<!--\n  ~ Copyright (c) 2014-2022 Bjoern Kimminich & the OWASP Juice Shop contributors.\n  ~ SPDX-License-Identifier: MIT\n  --><!DOCTYPE html><html lang=\"en\"><head>\n  <meta charset=\"utf-8\">\n  <title>OWASP Juice Shop</title>\n  <meta name=\"description\" content=\"Probably the most modern and sophisticated insecure web application\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link id=\"favicon\" rel=\"icon\" type=\"image/x-icon\" href=\"assets/public/favicon_js.ico\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css\">\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>\n  <script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"#546e7a\", \"text\": \"#ffffff\" },\n          \"button\": { \"background\": \"#558b2f\", \"text\": \"#ffffff\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>\n<style>.bluegrey-lightgreen-theme.mat-app-background{background-color:#303030;color:#fff}@charset \"UTF-8\";@media screen and (-webkit-min-device-pixel-ratio:0){}</style><link rel=\"stylesheet\" href=\"styles.css\" media=\"print\" onload=\"this.media='all'\"><noscript><link rel=\"stylesheet\" href=\"styles.css\"></noscript></head>\n<body class=\"mat-app-background bluegrey-lightgreen-theme\">\n  <app-root></app-root>\n<script src=\"runtime.js\" type=\"module\"></script><script src=\"polyfills.js\" type=\"module\"></script><script src=\"vendor.js\" type=\"module\"></script><script src=\"main.js\" type=\"module\"></script>\n\n</body></html>",
+        "Duration": 15.6264,
+        "StatusCode": 200
+      },
+      "LookupId": "368f3a5f-05bb-4bcd-557a-af110470a5e5",
+      "Impact": "This is generally not appropriate when using the same-origin security policy. The only case where this is appropriate when using the same-origin policy is when a page or API response is considered completely public content and it is intended to be accessible to everyone.\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "Misconfigured Access-Control-Allow-Origin Header",
+      "ProofOfConcept": "",
+      "RemedialActions": "",
+      "RemedialProcedure": "If this page is intended to be accessible to everyone, you don't need to take any action. Otherwise please follow the guidelines for different architectures below in order to set this header and permit outside domain.\n\nApache* Add the following line inside either the <directory&gt;, <location&gt;, <files&gt; or <virtualhost&gt; sections of your server config (usually located in httpd.conf\t or apache.conf\t), or within a .htaccess\t file.\n\n    Header set Access-Control-Allow-Origin \"domain\"IIS61. Open Internet Information Service (IIS) Manager\n1. Right click the site you want to enable CORS for and go to Properties\n1. Change to the HTTP Headers tab\n1. In the Custom HTTP headers section, click Add\n1. Enter Access-Control-Allow-Origin as the header name\n1. Enter domain as the header valueIIS7* Merge the following xml into the web.config file at the root of your application or site:\n\n    <?xml version=\"1.0\" encoding=\"utf-8\" ?&gt;\n    <configuration&gt;\n      <system.webserver&gt;\n        <httpprotocol&gt;\n          <customheaders&gt;\n            <add name=\"Access-Control-Allow-Origin\" value=\"domain\" /&gt;\n          </customheaders&gt;\n        </httpprotocol&gt;\n      </system.webserver&gt;\n    </configuration&gt;ASP.NET* If you don't have access to configure IIS, you can still add the header through ASP.NET by adding the following line to your source pages:\n\n    Response.AppendHeader(\"Access-Control-Allow-Origin\", \"domain\");\n\n",
+      "RemedyReferences": "",
+      "Severity": "Low",
+      "State": "Present",
+      "Type": "MisconfiguredAccessControlOrigin",
+      "Url": "http://127.0.0.1:3000/",
+      "Tags": []
+    },
+    {
+      "Certainty": 90,
+      "Classification": {
+        "Iso27001": "A.14.1.2",
+        "Capec": "310",
+        "Cvss": null,
+        "Cvss31": null,
+        "Cwe": "1035, 937",
+        "Hipaa": "164.308(a)(1)(i)",
+        "Owasp": "A9",
+        "OwaspProactiveControls": "C1",
+        "Pci32": "6.2",
+        "Wasc": "",
+        "Asvs40": "1.14.3",
+        "Nistsp80053": "CM-6",
+        "DisaStig": "V-16836",
+        "OwaspApiTop10": "",
+        "OwaspTopTen2021": "A06"
+      },
+      "Confirmed": false,
+      "Description": "Invicti Enterprise identified the target web site is using jQuery and detected that it is out of date.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "",
+      "ExtraInformation": [
+        {
+          "Name": "Identified Version",
+          "Value": "2.2.4"
+        },
+        {
+          "Name": "Latest Version",
+          "Value": "2.2.4 (in this branch)"
+        },
+        {
+          "Name": "Overall Latest Version",
+          "Value": "3.6.1"
+        },
+        {
+          "Name": "Vulnerability Database",
+          "Value": "Result is based on 09/13/2022 17:00:00 vulnerability database content."
+        }
+      ],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET / HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": []
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\nDate: Thu, 15 Sep 2022 12:04:04 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nAccept-Ranges: bytes\r\nLast-Modified: Thu, 15 Sep 2022 09:57:56 GMT\r\nETag: W/\"7c3-18340956677\"\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Encoding: \r\nConnection: keep-alive\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: public, max-age=0\r\nVary: Accept-Encoding\r\n\r\n<!--\n  ~ Copyright (c) 2014-2022 Bjoern Kimminich & the OWASP Juice Shop contributors.\n  ~ SPDX-License-Identifier: MIT\n  --><!DOCTYPE html><html lang=\"en\"><head>\n  <meta charset=\"utf-8\">\n  <title>OWASP Juice Shop</title>\n  <meta name=\"description\" content=\"Probably the most modern and sophisticated insecure web application\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link id=\"favicon\" rel=\"icon\" type=\"image/x-icon\" href=\"assets/public/favicon_js.ico\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css\">\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>\n  <script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"#546e7a\", \"text\": \"#ffffff\" },\n          \"button\": { \"background\": \"#558b2f\", \"text\": \"#ffffff\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>\n<style>.bluegrey-lightgreen-theme.mat-app-background{background-color:#303030;color:#fff}@charset \"UTF-8\";@media screen and (-webkit-min-device-pixel-ratio:0){}</style><link rel=\"stylesheet\" href=\"styles.css\" media=\"print\" onload=\"this.media='all'\"><noscript><link rel=\"stylesheet\" href=\"styles.css\"></noscript></head>\n<body class=\"mat-app-background bluegrey-lightgreen-theme\">\n  <app-root></app-root>\n<script src=\"runtime.js\" type=\"module\"></script><script src=\"polyfills.js\" type=\"module\"></script><script src=\"vendor.js\" type=\"module\"></script><script src=\"main.js\" type=\"module\"></script>\n\n</body></html>",
+        "Duration": 15.6264,
+        "StatusCode": 200
+      },
+      "LookupId": "fdf34cc1-e684-4429-5572-af110470a5e5",
+      "Impact": "Since this is an old version of the software, it may be vulnerable to attacks.\n\n",
+      "KnownVulnerabilities": [
+        {
+          "Severity": "Medium",
+          "Title": "jQuery Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') Vulnerability"
+        }
+      ],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "Out-of-date Version (jQuery)",
+      "ProofOfConcept": "",
+      "RemedialActions": "",
+      "RemedialProcedure": "Please upgrade your installation of jQuery to the latest stable version.\n\n",
+      "RemedyReferences": "* [Downloading jQuery][0]\n\n[0]: https://jquery.com/download/",
+      "Severity": "Medium",
+      "State": "Present",
+      "Type": "JqueryOutOfDate",
+      "Url": "http://127.0.0.1:3000/",
+      "Tags": []
+    },
+    {
+      "Certainty": 90,
+      "Classification": {
+        "Iso27001": "A.14.2.5",
+        "Capec": "",
+        "Cvss": null,
+        "Cvss31": null,
+        "Cwe": "16",
+        "Hipaa": "164.308(a)",
+        "Owasp": "",
+        "OwaspProactiveControls": "",
+        "Pci32": "",
+        "Wasc": "15",
+        "Asvs40": "",
+        "Nistsp80053": "CM-6",
+        "DisaStig": "V-16787",
+        "OwaspApiTop10": "",
+        "OwaspTopTen2021": ""
+      },
+      "Confirmed": false,
+      "Description": "Invicti Enterprise detected a missing X-XSS-Protection\t header which means that this website could be at risk of a Cross-site Scripting (XSS) attacks.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "* [Internet Explorer 8 Security Features - MSDN][0]\n* [X-XSS-Protection HTTP Header][1]\n* [Internet Explorer 8 XSS Filter][2]\n\n[0]: https://docs.microsoft.com/en-us/previous-versions//cc288472(v=vs.85)\n[1]: https://www.netsparker.com/whitepaper-http-security-headers/#XXSSProtectionHTTPHeader\n[2]: https://blogs.msdn.com/b/ie/archive/2008/07/01/ie8-security-part-iv-the-xss-filter.aspx",
+      "ExtraInformation": [],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET / HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": []
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\nDate: Thu, 15 Sep 2022 12:04:04 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nAccept-Ranges: bytes\r\nLast-Modified: Thu, 15 Sep 2022 09:57:56 GMT\r\nETag: W/\"7c3-18340956677\"\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Encoding: \r\nConnection: keep-alive\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: public, max-age=0\r\nVary: Accept-Encoding\r\n\r\n<!--\n  ~ Copyright (c) 2014-2022 Bjoern Kimminich & the OWASP Juice Shop contributors.\n  ~ SPDX-License-Identifier: MIT\n  --><!DOCTYPE html><html lang=\"en\"><head>\n  <meta charset=\"utf-8\">\n  <title>OWASP Juice Shop</title>\n  <meta name=\"description\" content=\"Probably the most modern and sophisticated insecure web application\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link id=\"favicon\" rel=\"icon\" type=\"image/x-icon\" href=\"assets/public/favicon_js.ico\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css\">\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>\n  <script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"#546e7a\", \"text\": \"#ffffff\" },\n          \"button\": { \"background\": \"#558b2f\", \"text\": \"#ffffff\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>\n<style>.bluegrey-lightgreen-theme.mat-app-background{background-color:#303030;color:#fff}@charset \"UTF-8\";@media screen and (-webkit-min-device-pixel-ratio:0){}</style><link rel=\"stylesheet\" href=\"styles.css\" media=\"print\" onload=\"this.media='all'\"><noscript><link rel=\"stylesheet\" href=\"styles.css\"></noscript></head>\n<body class=\"mat-app-background bluegrey-lightgreen-theme\">\n  <app-root></app-root>\n<script src=\"runtime.js\" type=\"module\"></script><script src=\"polyfills.js\" type=\"module\"></script><script src=\"vendor.js\" type=\"module\"></script><script src=\"main.js\" type=\"module\"></script>\n\n</body></html>",
+        "Duration": 15.6264,
+        "StatusCode": 200
+      },
+      "LookupId": "08d17ab8-8a1d-4414-55b2-af110470a5e5",
+      "Impact": "This issue is reported as additional information only. There is no direct impact arising from this issue.\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "Missing X-XSS-Protection Header",
+      "ProofOfConcept": "",
+      "RemedialActions": "",
+      "RemedialProcedure": "Add the X-XSS-Protection header with a value of \"1; mode= block\". \n\n* X-XSS-Protection: 1; mode=block\n\n",
+      "RemedyReferences": "",
+      "Severity": "BestPractice",
+      "State": "Present, AcceptedRisk",
+      "Type": "MissingXssProtectionHeader",
+      "Url": "http://127.0.0.1:3000/",
+      "Tags": []
+    },
+    {
+      "Certainty": 100,
+      "Classification": {
+        "Iso27001": "A.14.2.5",
+        "Capec": "",
+        "Cvss": null,
+        "Cvss31": null,
+        "Cwe": "16",
+        "Hipaa": "",
+        "Owasp": "",
+        "OwaspProactiveControls": "",
+        "Pci32": "",
+        "Wasc": "15",
+        "Asvs40": "3.4.3",
+        "Nistsp80053": "CM-6",
+        "DisaStig": "V-16786",
+        "OwaspApiTop10": "",
+        "OwaspTopTen2021": ""
+      },
+      "Confirmed": false,
+      "Description": "Cookies are typically sent to third parties in cross origin requests. This can be abused to do CSRF attacks. Recently a new cookie attribute named _SameSite_ was proposed to disable third-party usage for some cookies, to prevent CSRF attacks.\n\nSame-site cookies allow servers to mitigate the risk of CSRF and information leakage attacks by asserting that a particular cookie should only be sent with requests initiated from the same registrable domain.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "* [Security Cookies - SameSite Attribute - Invicti Enterprise][0]\n* [Using the Same-Site Cookies Attribute to Prevent CSRF Attacks][1]\n* [Same-site Cookies][2]\n* [Preventing CSRF with the same-site cookie attribute][3]\n* [SameSite cookies explained][4]\n* [Get Ready for New SameSite=None; Secure Cookie Settings][5]\n\n[0]: https://www.netsparker.com/security-cookies-whitepaper/#SameSiteAttribute\n[1]: https://www.netsparker.com/blog/web-security/same-site-cookie-attribute-prevent-cross-site-request-forgery/\n[2]: https://tools.ietf.org/html/draft-west-first-party-cookies-07\n[3]: https://www.sjoerdlangkemper.nl/2016/04/14/preventing-csrf-with-samesite-cookie-attribute/\n[4]: https://web.dev/samesite-cookies-explained/\n[5]: https://blog.chromium.org/2019/10/developers-get-ready-for-new.html",
+      "ExtraInformation": [
+        {
+          "Name": "Identified Cookie(s)",
+          "Value": "cookieconsent_status, token"
+        },
+        {
+          "Name": "Cookie Source",
+          "Value": "JavaScript"
+        }
+      ],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET / HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": []
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\nDate: Thu, 15 Sep 2022 12:04:04 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nAccept-Ranges: bytes\r\nLast-Modified: Thu, 15 Sep 2022 09:57:56 GMT\r\nETag: W/\"7c3-18340956677\"\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Encoding: \r\nConnection: keep-alive\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: public, max-age=0\r\nVary: Accept-Encoding\r\n\r\n<!--\n  ~ Copyright (c) 2014-2022 Bjoern Kimminich & the OWASP Juice Shop contributors.\n  ~ SPDX-License-Identifier: MIT\n  --><!DOCTYPE html><html lang=\"en\"><head>\n  <meta charset=\"utf-8\">\n  <title>OWASP Juice Shop</title>\n  <meta name=\"description\" content=\"Probably the most modern and sophisticated insecure web application\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link id=\"favicon\" rel=\"icon\" type=\"image/x-icon\" href=\"assets/public/favicon_js.ico\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css\">\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>\n  <script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"#546e7a\", \"text\": \"#ffffff\" },\n          \"button\": { \"background\": \"#558b2f\", \"text\": \"#ffffff\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>\n<style>.bluegrey-lightgreen-theme.mat-app-background{background-color:#303030;color:#fff}@charset \"UTF-8\";@media screen and (-webkit-min-device-pixel-ratio:0){}</style><link rel=\"stylesheet\" href=\"styles.css\" media=\"print\" onload=\"this.media='all'\"><noscript><link rel=\"stylesheet\" href=\"styles.css\"></noscript></head>\n<body class=\"mat-app-background bluegrey-lightgreen-theme\">\n  <app-root></app-root>\n<script src=\"runtime.js\" type=\"module\"></script><script src=\"polyfills.js\" type=\"module\"></script><script src=\"vendor.js\" type=\"module\"></script><script src=\"main.js\" type=\"module\"></script>\n\n</body></html>",
+        "Duration": 15.6264,
+        "StatusCode": 200
+      },
+      "LookupId": "bda2ea37-4bf8-40dc-558a-af110470a5e5",
+      "Impact": "",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "SameSite Cookie Not Implemented",
+      "ProofOfConcept": "",
+      "RemedialActions": "",
+      "RemedialProcedure": "The server can set a same-site cookie by adding the SameSite=...\t attribute to the Set-Cookie\t header. There are three possible values for the SameSite\t attribute:\n\n* Lax: In this mode, the cookie will only be sent with a top-level get request.     Set-Cookie: key=value; SameSite=Lax\n\n    * Strict: In this mode, the cookie will not be sent with any cross-site usage even if the user follows a link to another website.    Set-Cookie: key=value; SameSite=Strict\n\n    * None: In this mode, the cookie will be sent with the cross-site requests. Cookies with SameSite=None must also specify the Secure attribute to transfer them via a secure context. Setting a SameSite=None cookie without the Secure attribute will be rejected by the browsers.  \n    Set-Cookie: key=value; SameSite=None; Secure\n\n",
+      "RemedyReferences": "",
+      "Severity": "BestPractice",
+      "State": "Present, AcceptedRisk",
+      "Type": "SameSiteCookieNotImplemented",
+      "Url": "http://127.0.0.1:3000/",
+      "Tags": []
+    },
+    {
+      "Certainty": 100,
+      "Classification": {
+        "Iso27001": "A.14.2.5",
+        "Capec": "",
+        "Cvss": null,
+        "Cvss31": null,
+        "Cwe": "16",
+        "Hipaa": "",
+        "Owasp": "",
+        "OwaspProactiveControls": "",
+        "Pci32": "",
+        "Wasc": "15",
+        "Asvs40": "10.3.2, 14.2.3",
+        "Nistsp80053": "CM-6",
+        "DisaStig": "V-16786",
+        "OwaspApiTop10": "",
+        "OwaspTopTen2021": ""
+      },
+      "Confirmed": true,
+      "Description": "Subresource Integrity (SRI) provides a mechanism to check integrity of the resource hosted by third parties like Content Delivery Networks (CDNs) and verifies that the fetched resource has been delivered without unexpected manipulation.SRI does this using hash comparison mechanism. In this way, hash value declared in HTML elements (for now only script and link elements are supported) will be compared with the hash value of the resource hosted by third party.Use of SRI is recommended as a best-practice, whenever libraries are loaded from a third-party source.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "* [Subresource Integrity][0]\n* [Do not let your CDN betray you: Use Subresource Integrity][1]\n* [Web Application Security with Subresource Integrity][2]\n* [SRI Hash Generator][3]\n\n[0]: https://www.w3.org/TR/SRI/\n[1]: https://hacks.mozilla.org/2015/09/subresource-integrity-in-firefox-43/\n[2]: https://speakerdeck.com/jdorfman/web-application-security-with-subresource-integrity\n[3]: https://www.srihash.org/",
+      "ExtraInformation": [
+        {
+          "Name": "Identified Sub Resource(s)",
+          "Value": "http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css, http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js, http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+        }
+      ],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET / HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": []
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\nDate: Thu, 15 Sep 2022 12:04:04 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nAccept-Ranges: bytes\r\nLast-Modified: Thu, 15 Sep 2022 09:57:56 GMT\r\nETag: W/\"7c3-18340956677\"\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Encoding: \r\nConnection: keep-alive\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: public, max-age=0\r\nVary: Accept-Encoding\r\n\r\n<!--\n  ~ Copyright (c) 2014-2022 Bjoern Kimminich & the OWASP Juice Shop contributors.\n  ~ SPDX-License-Identifier: MIT\n  --><!DOCTYPE html><html lang=\"en\"><head>\n  <meta charset=\"utf-8\">\n  <title>OWASP Juice Shop</title>\n  <meta name=\"description\" content=\"Probably the most modern and sophisticated insecure web application\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link id=\"favicon\" rel=\"icon\" type=\"image/x-icon\" href=\"assets/public/favicon_js.ico\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css\">\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>\n  <script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"#546e7a\", \"text\": \"#ffffff\" },\n          \"button\": { \"background\": \"#558b2f\", \"text\": \"#ffffff\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>\n<style>.bluegrey-lightgreen-theme.mat-app-background{background-color:#303030;color:#fff}@charset \"UTF-8\";@media screen and (-webkit-min-device-pixel-ratio:0){}</style><link rel=\"stylesheet\" href=\"styles.css\" media=\"print\" onload=\"this.media='all'\"><noscript><link rel=\"stylesheet\" href=\"styles.css\"></noscript></head>\n<body class=\"mat-app-background bluegrey-lightgreen-theme\">\n  <app-root></app-root>\n<script src=\"runtime.js\" type=\"module\"></script><script src=\"polyfills.js\" type=\"module\"></script><script src=\"vendor.js\" type=\"module\"></script><script src=\"main.js\" type=\"module\"></script>\n\n</body></html>",
+        "Duration": 15.6264,
+        "StatusCode": 200
+      },
+      "LookupId": "147cdebd-e910-4008-557e-af110470a5e5",
+      "Impact": "",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "Subresource Integrity (SRI) Not Implemented",
+      "ProofOfConcept": "",
+      "RemedialActions": "",
+      "RemedialProcedure": "Using Subresource Integrity is simply to add _integrity_ attribute to the _script_ tag along with a base64 encoded cryptographic hash value.    <script src=\"https://code.jquery.com/jquery-2.1.4.min.js\" integrity=\"sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC\" crossorigin=\"anonymous\"&gt;</script&gt;\n\nThe hash algorithm must be one of **sha256**, **sha384** or **sha512**, followed by a '-' character.\n\n",
+      "RemedyReferences": "",
+      "Severity": "BestPractice",
+      "State": "Present, AcceptedRisk",
+      "Type": "SubResourceIntegrityNotImplemented",
+      "Url": "http://127.0.0.1:3000/",
+      "Tags": []
+    },
+    {
+      "Certainty": 100,
+      "Classification": {
+        "Iso27001": "A.14.2.5",
+        "Capec": "",
+        "Cvss": null,
+        "Cvss31": null,
+        "Cwe": "16",
+        "Hipaa": "",
+        "Owasp": "",
+        "OwaspProactiveControls": "",
+        "Pci32": "",
+        "Wasc": "15",
+        "Asvs40": "14.4.3",
+        "Nistsp80053": "CM-6",
+        "DisaStig": "V-16786",
+        "OwaspApiTop10": "",
+        "OwaspTopTen2021": ""
+      },
+      "Confirmed": true,
+      "Description": " CSP is an added layer of security that helps to mitigate mainly Cross-site Scripting attacks.\n\n CSP can be enabled instructing the browser with a Content-Security-Policy directive in a response header;\n\n     Content-Security-Policy: script-src 'self';or in a meta tag;\n\n    <meta http-equiv=\"Content-Security-Policy\" content=\"script-src 'self';\"&gt; In the above example, you can restrict script loading only to the same domain. It will also restrict inline script executions both in the element attributes and the event handlers. There are various directives which you can use by declaring CSP:\n\n\n    * **script-src:** Restricts the script loading resources to the ones you declared. By default, it disables inline script executions unless you permit to the evaluation functions and inline scripts by the unsafe-eval and unsafe-inline keywords.\n\n    * **base-uri:** The base element is used to resolve a relative URL to an absolute one. By using this CSP directive, you can define all possible URLs which could be assigned to the base-href attribute of the document.\n\n    * **frame-ancestors**: It is very similar to X-Frame-Options HTTP header. It defines the URLs by which the page can be loaded in an iframe.\n\n    * **frame-src / child-src**: frame-src is the deprecated version of child-src. Both define the sources that can be loaded by iframe on the page. (Please note that frame-src was brought back in CSP 3)\n\n    * **object-src** : Defines the resources that can be loaded by embedding such as Flash files, Java Applets.\n\n    * **img-src**: As its name implies, it defines the resources where the images can be loaded from.\n\n    * **connect-src**: Defines the whitelisted targets for XMLHttpRequest and WebSocket objects.\n\n    * **default-src**: It is a fallback for the directives that mostly end with -src suffix. When the directives below are not defined, the value set to default-src will be used instead:\n    \n\n      * child-src\n\n      * connect-src\n\n      * font-src\n\n      * img-src\n\n      * manifest-src\n\n      * media-src\n\n      * object-src\n\n      * script-src\n\n      * style-src\n\n    \nWhen setting the CSP directives, you can also use some CSP keywords: \n\n\n    * **none**: Denies loading resources from anywhere.\n\n    * **self**: Points to the document's URL (domain + port).\n\n    * **unsafe-inline**: Permits running inline scripts.\n\n    * **unsafe-eval**: Permits execution of evaluation functions such as eval().\n\n    \nIn addition to CSP keywords, you can also use wildcard or only a scheme when defining whitelist URLs for the points. Wildcard can be used for subdomain and port portions of the URLs:\n\n    Content-Security-Policy: script-src&nbsp;[https://*.example.com][0];    Content-Security-Policy: script-src&nbsp;[https://example.com][0]:*;    Content-Security-Policy: script-src https:;It is also possible to set a CSP in Report-Only mode instead of forcing it immediately in the migration period. Thus you can see the violations of the CSP policy in the current state of your web site while migrating to CSP:\n\n    Content-Security-Policy-Report-Only: script-src 'self'; report-uri:&nbsp;[https://example.com][0];\n\n[0]: https://example.com",
+      "ExploitationSkills": "",
+      "ExternalReferences": "* [An Introduction to Content Security Policy][0]\n* [Content Security Policy (CSP) HTTP Header][1]\n* [Content Security Policy (CSP)][2]\n\n[0]: https://www.html5rocks.com/en/tutorials/security/content-security-policy/\n[1]: https://www.netsparker.com/whitepaper-http-security-headers/#ContentSecurityPolicyHTTPHeader\n[2]: https://content-security-policy.com/",
+      "ExtraInformation": [],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET / HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": []
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\nDate: Thu, 15 Sep 2022 12:04:04 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nAccept-Ranges: bytes\r\nLast-Modified: Thu, 15 Sep 2022 09:57:56 GMT\r\nETag: W/\"7c3-18340956677\"\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Encoding: \r\nConnection: keep-alive\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: public, max-age=0\r\nVary: Accept-Encoding\r\n\r\n<!--\n  ~ Copyright (c) 2014-2022 Bjoern Kimminich & the OWASP Juice Shop contributors.\n  ~ SPDX-License-Identifier: MIT\n  --><!DOCTYPE html><html lang=\"en\"><head>\n  <meta charset=\"utf-8\">\n  <title>OWASP Juice Shop</title>\n  <meta name=\"description\" content=\"Probably the most modern and sophisticated insecure web application\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link id=\"favicon\" rel=\"icon\" type=\"image/x-icon\" href=\"assets/public/favicon_js.ico\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css\">\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>\n  <script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"#546e7a\", \"text\": \"#ffffff\" },\n          \"button\": { \"background\": \"#558b2f\", \"text\": \"#ffffff\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>\n<style>.bluegrey-lightgreen-theme.mat-app-background{background-color:#303030;color:#fff}@charset \"UTF-8\";@media screen and (-webkit-min-device-pixel-ratio:0){}</style><link rel=\"stylesheet\" href=\"styles.css\" media=\"print\" onload=\"this.media='all'\"><noscript><link rel=\"stylesheet\" href=\"styles.css\"></noscript></head>\n<body class=\"mat-app-background bluegrey-lightgreen-theme\">\n  <app-root></app-root>\n<script src=\"runtime.js\" type=\"module\"></script><script src=\"polyfills.js\" type=\"module\"></script><script src=\"vendor.js\" type=\"module\"></script><script src=\"main.js\" type=\"module\"></script>\n\n</body></html>",
+        "Duration": 15.6264,
+        "StatusCode": 200
+      },
+      "LookupId": "a587686c-f33f-49bd-559a-af110470a5e5",
+      "Impact": "There is no direct impact of not implementing CSP on your website. However, if your website is vulnerable to a Cross-site Scripting attack CSP can prevent successful exploitation of that vulnerability. By not implementing CSP you’ll be missing out on this extra layer of security.\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "Content Security Policy (CSP) Not Implemented",
+      "ProofOfConcept": "",
+      "RemedialActions": "* Enable CSP on your website by sending the Content-Security-Policy\t in HTTP response headers that instruct the browser to apply the policies you specified.\n* Apply the whitelist and policies as strict as possible.\n* Rescan your application to see if Invicti Enterprise identifies any weaknesses in your policies.\n\n",
+      "RemedialProcedure": " Enable CSP on your website by sending the Content-Security-Policy\t in HTTP response headers that instruct the browser to apply the policies you specified.\n\n",
+      "RemedyReferences": "",
+      "Severity": "BestPractice",
+      "State": "Present, AcceptedRisk",
+      "Type": "CspNotImplemented",
+      "Url": "http://127.0.0.1:3000/",
+      "Tags": []
+    },
+    {
+      "Certainty": 90,
+      "Classification": {
+        "Iso27001": "A.14.2.5",
+        "Capec": "",
+        "Cvss": null,
+        "Cvss31": null,
+        "Cwe": "200",
+        "Hipaa": "",
+        "Owasp": "A6",
+        "OwaspProactiveControls": "",
+        "Pci32": "",
+        "Wasc": "",
+        "Asvs40": "14.4.6",
+        "Nistsp80053": "AC-22",
+        "DisaStig": "V-16814",
+        "OwaspApiTop10": "",
+        "OwaspTopTen2021": ""
+      },
+      "Confirmed": false,
+      "Description": " Invicti Enterprise detected that no Referrer-Policy header implemented.\n\n Referrer-Policy is a security header designed to prevent cross-domain Referer leakage.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "* [Referrer Policy][0]\n* [Referrer Policy - MDN][1]\n* [Referrer Policy HTTP Header][2]\n* [A New Security Header: Referrer Policy][3]\n* [Can I Use Referrer-Policy][4]\n\n[0]: https://www.w3.org/TR/referrer-policy/\n[1]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy\n[2]: https://www.netsparker.com/whitepaper-http-security-headers/#ReferrerPolicyHTTPHeader\n[3]: https://scotthelme.co.uk/a-new-security-header-referrer-policy/\n[4]: https://caniuse.com/#search=referrer%20policy",
+      "ExtraInformation": [],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET /dataerasure HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; cookieconsent_status=dismiss\r\nReferer: http://127.0.0.1:3000/\r\nUpgrade-Insecure-Requests: 1\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": []
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 500 Internal Server Error\r\nTransfer-Encoding: chunked\r\nDate: Thu, 15 Sep 2022 12:04:32 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nConnection: keep-alive\r\nContent-Type: text/html; charset=utf-8\r\nContent-Encoding: \r\nAccess-Control-Allow-Origin: *\r\nVary: Accept-Encoding\r\n\r\n<html>\n  <head>\n    <meta charset='utf-8'> \n    <title>Error: Blocked illegal activity by ::ffff:172.17.0.1</title>\n    <style>* {\n  margin: 0;\n  padding: 0;\n  outline: 0;\n}\n\nbody {\n  padding: 80px 100px;\n  font: 13px \"Helvetica Neue\", \"Lucida Grande\", \"Arial\";\n  background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9));\n  background: #ECE9E9 -moz-linear-gradient(top, #fff, #ECE9E9);\n  background-repeat: no-repeat;\n  color: #555;\n  -webkit-font-smoothing: antialiased;\n}\nh1, h2 {\n  font-size: 22px;\n  color: #343434;\n}\nh1 em, h2 em {\n  padding: 0 5px;\n  font-weight: normal;\n}\nh1 {\n  font-size: 60px;\n}\nh2 {\n  margin-top: 10px;\n}\nul li {\n  list-style: none;\n}\n#stacktrace {\n  margin-left: 60px;\n}\n</style>\n  </head>\n  <body>\n    <div id=\"wrapper\">\n      <h1>OWASP Juice Shop (Express ^4.17.1)</h1>\n      <h2><em>500</em> Error: Blocked illegal activity by ::ffff:172.17.0.1</h2>\n      <ul id=\"stacktrace\"><li> &nbsp; &nbsp;at /juice-shop/build/routes/dataErasure.js:24:14</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/juice-shop/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at next (/juice-shop/node_modules/express/lib/router/route.js:144:13)</li><li> &nbsp; &nbsp;at Route.dispatch (/juice-shop/node_modules/express/lib/router/route.js:114:3)</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/juice-shop/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at /juice-shop/node_modules/express/lib/router/index.js:284:15</li><li> &nbsp; &nbsp;at Function.process_params (/juice-shop/node_modules/express/lib/router/index.js:346:12)</li><li> &nbsp; &nbsp;at next (/juice-shop/node_modules/express/lib/router/index.js:280:10)</li><li> &nbsp; &nbsp;at Function.handle (/juice-shop/node_modules/express/lib/router/index.js:175:3)</li><li> &nbsp; &nbsp;at router (/juice-shop/node_modules/express/lib/router/index.js:47:12)</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/juice-shop/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at trim_prefix (/juice-shop/node_modules/express/lib/router/index.js:328:13)</li><li> &nbsp; &nbsp;at /juice-shop/node_modules/express/lib/router/index.js:286:9</li><li> &nbsp; &nbsp;at Function.process_params (/juice-shop/node_modules/express/lib/router/index.js:346:12)</li><li> &nbsp; &nbsp;at next (/juice-shop/node_modules/express/lib/router/index.js:280:10)</li><li> &nbsp; &nbsp;at /juice-shop/build/routes/verify.js:135:5</li><li> &nbsp; &nbsp;at Layer.handle [as handle_request] (/juice-shop/node_modules/express/lib/router/layer.js:95:5)</li><li> &nbsp; &nbsp;at trim_prefix (/juice-shop/node_modules/express/lib/router/index.js:328:13)</li><li> &nbsp; &nbsp;at /juice-shop/node_modules/express/lib/router/index.js:286:9</li><li> &nbsp; &nbsp;at Function.process_params (/juice-shop/node_modules/express/lib/router/index.js:346:12)</li><li> &nbsp; &nbsp;at next (/juice-shop/node_modules/express/lib/router/index.js:280:10)</li><li> &nbsp; &nbsp;at /juice-shop/build/routes/verify.js:71:5</li></ul>\n    </div>\n  </body>\n</html>\n",
+        "Duration": 312.49870000000004,
+        "StatusCode": 500
+      },
+      "LookupId": "b1adb7ba-9291-489a-5582-af110470a5e5",
+      "Impact": " Referer header is a request header that indicates the site which the traffic originated from. If there is no adequate prevention in place, the URL itself, and even sensitive information contained in the URL will be leaked to the cross-site.\n\n The lack of Referrer-Policy header might affect privacy of the users and site's itself\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "Referrer-Policy Not Implemented",
+      "ProofOfConcept": "",
+      "RemedialActions": " In a response header:\n\n    Referrer-Policy: no-referrer | same-origin | origin | strict-origin | no-origin-when-downgrading In a META tag\n\n    <meta name=\"Referrer-Policy\" value=\"no-referrer | same-origin\"/&gt;In an element attribute\n\n    <a href=\"http://crosssite.example.com\" rel=\"noreferrer\"&gt;</a&gt; or\n\n    <a href=\"http://crosssite.example.com\" referrerpolicy=\"no-referrer | same-origin | origin | strict-origin | no-origin-when-downgrading\"&gt;</a&gt;",
+      "RemedialProcedure": " Please implement a Referrer-Policy by using the Referrer-Policy response header or by declaring it in the meta tags. It’s also possible to control referrer information over an HTML-element by using the rel attribute.\n\n",
+      "RemedyReferences": "",
+      "Severity": "BestPractice",
+      "State": "Present, AcceptedRisk",
+      "Type": "ReferrerPolicyNotImplemented",
+      "Url": "http://127.0.0.1:3000/dataerasure",
+      "Tags": []
+    },
+    {
+      "Certainty": 100,
+      "Classification": {
+        "Iso27001": "A.14.1.3",
+        "Capec": "217",
+        "Cvss": {
+          "BaseScore": {
+            "Severity": 2,
+            "Type": "Base",
+            "Value": "6.8"
+          },
+          "EnvironmentalScore": {
+            "Severity": 2,
+            "Type": "Environmental",
+            "Value": "6.1"
+          },
+          "TemporalScore": {
+            "Severity": 2,
+            "Type": "Temporal",
+            "Value": "6.1"
+          },
+          "Vector": "CVSS:3.0/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N/E:P/RL:O/RC:C"
+        },
+        "Cvss31": {
+          "BaseScore": {
+            "Severity": 2,
+            "Type": "Base",
+            "Value": "6.8"
+          },
+          "EnvironmentalScore": {
+            "Severity": 2,
+            "Type": "Environmental",
+            "Value": "6.1"
+          },
+          "TemporalScore": {
+            "Severity": 2,
+            "Type": "Temporal",
+            "Value": "6.1"
+          },
+          "Vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N/E:P/RL:O/RC:C"
+        },
+        "Cwe": "311",
+        "Hipaa": "164.306",
+        "Owasp": "A6",
+        "OwaspProactiveControls": "",
+        "Pci32": "6.5.4",
+        "Wasc": "4",
+        "Asvs40": "9.1.1",
+        "Nistsp80053": "SC-8",
+        "DisaStig": "V-6136",
+        "OwaspApiTop10": "API7",
+        "OwaspTopTen2021": "A02"
+      },
+      "Confirmed": false,
+      "Description": " Invicti Enterprise detected that SSL/TLS is not implemented.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "",
+      "ExtraInformation": [],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "[SSL Connection]",
+        "Method": "GET",
+        "Parameters": []
+      },
+      "HttpResponse": {
+        "Content": "[SSL Connection]",
+        "Duration": 1.0,
+        "StatusCode": 200
+      },
+      "LookupId": "2ebceb25-1476-4ae7-5576-af110470a5e5",
+      "Impact": " An attacker who is able to intercept your - or your users' - network traffic can read and modify any messages that are exchanged with your server. \n\n That means that an attacker can see passwords in clear text, modify the appearance of your website, redirect the user to other web pages or steal session information.\n\n Therefore no message you send to the server remains confidential.\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "SSL/TLS Not Implemented",
+      "ProofOfConcept": "",
+      "RemedialActions": "",
+      "RemedialProcedure": " We suggest that you implement SSL/TLS properly, for example by using &nbsp;[the Certbot tool][0] &nbsp;provided by the Let's Encrypt certificate authority. It can automatically configure most modern web servers, e.g. Apache and Nginx to use SSL/TLS. Both the tool and the certificates are free and are usually installed within minutes.\n\n[0]: https://letsencrypt.org/getting-started/",
+      "RemedyReferences": "",
+      "Severity": "Medium",
+      "State": "Present",
+      "Type": "SslNotImplemented",
+      "Url": "https://127.0.0.1/",
+      "Tags": []
+    },
+    {
+      "Certainty": 90,
+      "Classification": {
+        "Iso27001": "A.18.1.3",
+        "Capec": "",
+        "Cvss": null,
+        "Cvss31": null,
+        "Cwe": "",
+        "Hipaa": "",
+        "Owasp": "",
+        "OwaspProactiveControls": "C7",
+        "Pci32": "",
+        "Wasc": "",
+        "Asvs40": "",
+        "Nistsp80053": "AC-22",
+        "DisaStig": "V-16814",
+        "OwaspApiTop10": "",
+        "OwaspTopTen2021": ""
+      },
+      "Confirmed": false,
+      "Description": "Invicti Enterprise detected a security.txt\t file with potentially sensitive content.\n\n",
+      "ExploitationSkills": "",
+      "ExternalReferences": "* [security.txt Official Website][0]\n\n[0]: https://securitytxt.org/",
+      "ExtraInformation": [],
+      "FirstSeenDate": "16/09/2022 03:41 AM",
+      "HttpRequest": {
+        "Content": "GET /.well-known/security.txt HTTP/1.1\r\nHost: 127.0.0.1:3000\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-us,en;q=0.5\r\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjEsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiJiNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1MiIsInJvbGUiOiJjdXN0b21lciIsImRlbHV4ZVRva2VuIjoiIiwibGFzdExvZ2luSXAiOiJ1bmRlZmluZWQiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDowMzoyMi40MTYgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyMi0wOS0xNSAxMDoxNToyNS4xNDMgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjYzMjQzNDM4LCJleHAiOjE2NjMyNjE0Mzh9.HxJv_5dMlpb3qu1ZdPXawucM8_dHpRFxXP8FvdAgv9kHCHxfZPaMVE-zisF3CKp0RqtioztXwi60CCVyJlhGx1xSyE-4CX4N4W68lSfKkiexBv1styA0H3Qlwx_xRa24WYRXmxaR205nkU4BkHyPAIyce3ZI5cv8QN_SorjcTD8\r\nCache-Control: no-cache\r\nCookie: language=en; cookieconsent_status=dismiss\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\n\r\n",
+        "Method": "GET",
+        "Parameters": [
+          {
+            "Name": "URI-BASED",
+            "Type": "FullUrl",
+            "Value": ".well-known/security.txt",
+            "Vulnerable": true
+          }
+        ]
+      },
+      "HttpResponse": {
+        "Content": "HTTP/1.1 200 OK\r\nDate: Thu, 15 Sep 2022 13:14:46 GMT\r\nX-Content-Type-Options: nosniff\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs\r\nVary: Accept-Encoding\r\nContent-Type: text/plain; charset=utf-8\r\nConnection: keep-alive\r\nContent-Length: 399\r\nAccess-Control-Allow-Origin: *\r\nETag: W/\"18f-bpuZssPQGG6+hA7MyVzRPDCIaek\"\r\n\r\nContact: mailto:donotreply@owasp-juice.shop\nEncryption: https://keybase.io/bkimminich/pgp_keys.asc?fingerprint=19c01cb7157e4645e9e2c863062a85a8cbfbdcda\nAcknowledgements: /#/score-board\nPreferred-languages: en, ar, az, bg, ca, cs, da, de, el, es, et, fi, fr, ka, he, hi, hu, id, it, ja, ko, lv, my, nl, no, pl, pt, ro, ru, si, sv, th, tr, uk, zh\nHiring: /#/jobs\nExpires: Fri, 15 Sep 2023 09:57:55 GMT",
+        "Duration": 16.0699,
+        "StatusCode": 200
+      },
+      "LookupId": "23c8f75f-4e5c-46db-55a6-af110470a5e5",
+      "Impact": " Depending on the content of the file, an attacker might discover hidden directories and files.\n\n",
+      "KnownVulnerabilities": [],
+      "LastSeenDate": "16/09/2022 03:41 AM",
+      "Name": "Security.txt Detected",
+      "ProofOfConcept": "",
+      "RemedialActions": "",
+      "RemedialProcedure": "",
+      "RemedyReferences": "",
+      "Severity": "Information",
+      "State": "Present, AcceptedRisk",
+      "Type": "SecurityTxtIdentified",
+      "Url": "http://127.0.0.1:3000/.well-known/security.txt",
+      "Tags": []
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Asset,Criticality,Tags
+1.1.1.0/30,3,tag1;tag2
+1.1.1.4,2,tag3
+autobahn.security,3,tag4;tag5

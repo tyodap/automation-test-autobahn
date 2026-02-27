@@ -1,0 +1,4 @@
+Plugin ID,CVE,CVSS v2.0 Base Score,Risk,Host,Protocol,Port,Name,Synopsis,Description,Solution,See Also,Plugin Output
+10111,CVE-9999-9999,00.00,None,3.120.115.173,Tcp,0,ICMP Timestamp Request Remote Date Disclosure,It is possible to determine the exact time set on the remote host.,,,,The remote clock is synchronized with the local clock.
+10112,,,PASSED,192.168.1.2,tcp,0,Unix Compliance Checks,Compliance checks for Unix systems,,,,
+10113,,,PASSED,192.168.1.3,tcp,0,Unix Compliance Checks,Compliance checks for Unix systems,,,,
